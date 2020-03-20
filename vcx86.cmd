@@ -21,7 +21,6 @@ set "SetupPath=%CurrentCD%VSSDK\%Platform2%"
 @for /f "tokens=*" %%I in (%sFile%) do (set "sPath=!sPath!;%%I")
 set "Path=%CurrentCD%\CMake\bin;%SetupPath%;%sPath%;%Path%"
 
-
 :: ±‡“Î”Ô—‘
 if %BuildLang% == VS2017 (
   set CompileLang="Visual Studio 15 2017"
