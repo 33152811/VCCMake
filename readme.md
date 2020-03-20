@@ -13,7 +13,7 @@
     vcx86.cmd         : Compile master switch. Start compiling for x86 platform
     vcx64.cmd         : Compile master switch. Start compiling for x64 platform
 
-## Note
+## Note:
     At the beginning of compilation, the source code directory is checked for existence; 
     If it exists, it will not be downloaded again;
     In other words, if the source code directory exists, that download address can be filled in arbitrarily;
