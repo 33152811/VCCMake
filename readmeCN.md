@@ -1,4 +1,4 @@
-# VCCMake : VC2017/2019 CMake 编译源代码
+# VC-CMake : VC2017/VC2019 CMake 编译源代码
 
 - [English](readme.md)
 

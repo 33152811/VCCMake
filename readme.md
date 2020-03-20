@@ -1,4 +1,4 @@
-# VCCMake : VC2017 / 2019 CMake Compilation Source Code
+# VC-CMake : VC2017/VC2019 CMake Compilation Source Code
 
 - [简体中文](readmeCN.md)
 
