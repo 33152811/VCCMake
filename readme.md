@@ -12,6 +12,7 @@
     Script \ px64.txt : system search path when compiling x64
     vcx86.cmd         : Compile master switch. Start compiling for x86 platform
     vcx64.cmd         : Compile master switch. Start compiling for x64 platform
+    CMake             : Directory; places the tools needed for compilation. Such as cmake, pkgconfig, 7z, etc;
 
 ## Compile specification:
     At the beginning of compilation, the source code directory is checked for existence; 
