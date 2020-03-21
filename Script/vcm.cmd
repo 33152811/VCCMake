@@ -31,8 +31,8 @@ if exist "%Bpath%Source\%Bname%" (
 :: 如果上面 VC 多进程编译没有任何问题，这里就不会再编译了，直接安装了
 	CMake --build "%Btemp%" --config %Bconf% --target install
 	
-	echo  编译完成，清理临时文件
-	title 编译完成，清理临时文件
+echo  编译完成，清理临时文件
+title 编译完成，清理临时文件
 	rd /s /q %Btemp%
 	if exist "%Bpath%%Bname%.tar.gz" del "%Bpath%%Bname%.tar.gz"
 	if exist "%Bpath%%Bname%.tar"    del "%Bpath%%Bname%.tar"
