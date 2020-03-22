@@ -8,8 +8,8 @@
     Script \ dlsvn.cmd: Download source code in SVN mode
     Script \ vcp.txt  : CMake compilation parameters
     Script \ vcm.cmd  : VC compilation
-    Script \ px86.txt : system search path when compiling x86
-    Script \ px64.txt : system search path when compiling x64
+    Script \ px86.txt : system search path when compiling x86;Modify according to the machine directory;
+    Script \ px64.txt : system search path when compiling x64;Modify according to the machine directory;
     vcx86.cmd         : Compile master switch. Start compiling for x86 platform
     vcx64.cmd         : Compile master switch. Start compiling for x64 platform
     CMake             : Directory; places the tools needed for compilation. Such as cmake, pkgconfig, 7z, etc;

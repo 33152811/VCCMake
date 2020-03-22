@@ -8,8 +8,8 @@
     Script\dlsvn.cmd ：SVN 方式下载源代码;
     Script\vcp.txt   ：CMake 编译参数;
     Script\vcm.cmd   ：VC    编译;
-    Script\px86.txt  ：x86   编译时，系统搜索路径;
-    Script\px64.txt  ：x64   编译时，系统搜索路径;
+    Script\px86.txt  ：x86   编译时，系统搜索路径;按照自己机器目录修改;
+    Script\px64.txt  ：x64   编译时，系统搜索路径;按照自己机器目录修改;
     vcx86.cmd        ：编译总开关。启动编译 x86 平台;
     vcx64.cmd        ：编译总开关。启动编译 x64 平台;
     CMake            ：目录; 放置着编译需要的工具。如CMake、pkgconfig、7z,等等;
