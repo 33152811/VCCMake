@@ -6,8 +6,8 @@
     Script\dlzip.cmd ：从网络上下载源代码压缩文件;
     Script\dlgit.cmd ：GIT 方式下载源代码;
     Script\dlsvn.cmd ：SVN 方式下载源代码;
-    Script\vcp.txt   ：CMake 编译参数;
-    Script\vcm.cmd   ：VC    编译;
+    Script\vcp.txt   ：CMake 编译参数;可以随意添加; 只增不减; 除非越到编译错误;
+    Script\vcm.cmd   ：VC    编译; 核心所在;
     Script\px86.txt  ：x86   编译时，系统搜索路径;按照自己机器目录修改;
     Script\px64.txt  ：x64   编译时，系统搜索路径;按照自己机器目录修改;
     vcx86.cmd        ：编译总开关。启动编译 x86 平台;支持 VC2017、VC2019;
