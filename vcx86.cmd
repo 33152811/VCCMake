@@ -6,6 +6,7 @@ setlocal EnableDelayedExpansion
 set http_proxy=http://127.0.0.1:41081
 set https_proxy=http://127.0.0.1:41081
 
+:: 设置当前目录
 set "CurrentCD=%~dp0"
 
 :: 编译参数
