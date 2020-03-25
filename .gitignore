@@ -1,2 +1,5 @@
 /VSSDK
 /Source
+/_Build_
+/zwarns.log
+/zerror.log

@@ -38,7 +38,3 @@ F:\Green\Language\Matlab\R2018b\extern\lib\win64\microsoft
 F:\Green\Language\Python\3.6.5\x64
 F:\Green\Language\Python\3.6.5\x64\libs
 F:\Green\Language\Python\3.6.5\x64\Scripts
-F:\Green\Language\ZSDK\x64
-F:\Green\Language\ZSDK\x64\bin
-F:\Green\Language\ZSDK\x64\include
-F:\Green\Language\ZSDK\x64\lib

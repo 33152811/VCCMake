@@ -38,7 +38,3 @@ F:\Green\Language\Python\3.6.5\x86
 F:\Green\Language\Python\3.6.5\x86\libs
 F:\Green\Language\Python\3.6.5\x86\Scripts
 F:\Green\Language\swigwin-4.0.1
-F:\Green\Language\ZSDK\x86
-F:\Green\Language\ZSDK\x86\bin
-F:\Green\Language\ZSDK\x86\include
-F:\Green\Language\ZSDK\x86\lib

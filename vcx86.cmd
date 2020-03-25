@@ -20,7 +20,7 @@ set "SetupPath=%CurrentCD%VSSDK\%Platform2%"
 @set "sFile=%CurrentCD%Script\px86.txt"
 @set "sPath="
 @for /f "tokens=*" %%I in (%sFile%) do (set "sPath=!sPath!;%%I")
-set "Path=%CurrentCD%\CMake\bin;%SetupPath%;%sPath%;%Path%"
+set "Path=%CurrentCD%\CMake\bin;%SetupPath%\bin;%SetupPath%\include;%SetupPath%\lib;%sPath%;%Path%"
 
 :: ±‡“Î”Ô—‘
 if %BuildLang% == VS2017 (
@@ -40,3 +40,5 @@ call "%CurrentCD%Script\dlzip" SDL2-2.0.12 http://www.libsdl.org/release/SDL2-2.
 call "%CurrentCD%Script\dlgit" gflags      https://github.com/gflags/gflags.git             %Buildtype% gflags.sln
 call "%CurrentCD%Script\dlgit" glog        https://github.com/google/glog.git               %Buildtype% glog.sln
 call "%CurrentCD%Script\dlgit" gtest       https://github.com/google/googletest.git         %Buildtype% googletest-distribution.sln
+call "%CurrentCD%Script\dlgit" bzip2       https://github.com/osrf/bzip2_cmake.git          %Buildtype% bzip2.sln
+call "%CurrentCD%Script\dlgit" z3          https://github.com/Z3Prover/z3.git               %Buildtype% z3.sln
