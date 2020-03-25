@@ -42,4 +42,3 @@ call "%CurrentCD%Script\dlgit" glog        https://github.com/google/glog.git   
 call "%CurrentCD%Script\dlgit" gtest       https://github.com/google/googletest.git         %Buildtype% googletest-distribution.sln
 call "%CurrentCD%Script\dlgit" bzip2       https://github.com/osrf/bzip2_cmake.git          %Buildtype% bzip2.sln
 call "%CurrentCD%Script\dlgit" z3          https://github.com/Z3Prover/z3.git               %Buildtype% z3.sln
-
