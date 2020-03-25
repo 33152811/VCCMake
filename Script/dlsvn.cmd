@@ -15,4 +15,11 @@ title 下载 %Bname%
 :Compile
 echo  编译 %Bname%
 title 编译 %Bname%
+ :: 检查是否有 CMakeLists.txt 文件
+ if not exist "%Bpath%Source\%Bname%\CMakelists.txt" (
+   if exist "%Bpath%\patch\%Bname%.txt" (
+     copy "%Bpath%\patch\%Bname%.txt" "%Bpath%Source\%Bname%\CMakelists.txt"
+   )
+ )
+ :: 编译
  "%Bpath%Script\vcm" %Bpath% %Bname% %Bulid%
