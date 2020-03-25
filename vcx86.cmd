@@ -39,4 +39,4 @@ call "%CurrentCD%Script\dlzip" zlib-1.2.11 https://www.zlib.net/zlib-1.2.11.tar.
 call "%CurrentCD%Script\dlzip" SDL2-2.0.12 http://www.libsdl.org/release/SDL2-2.0.12.tar.gz %Buildtype% sdl2.sln
 call "%CurrentCD%Script\dlgit" gflags      https://github.com/gflags/gflags.git             %Buildtype% gflags.sln
 call "%CurrentCD%Script\dlgit" glog        https://github.com/google/glog.git               %Buildtype% glog.sln
-
+call "%CurrentCD%Script\dlgit" gteset      https://github.com/google/googletest.git         %Buildtype% googletest-distribution.sln
