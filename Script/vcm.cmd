@@ -17,6 +17,13 @@ set "sPara="
 for /f "tokens=*" %%I in (%sFile%) do (set "sPara=!sPara! %%I")
 set "Bpara=%sPara% %Bpara%"
 
+:: 检查是否有 CMakeLists.txt 文件
+if not exist "%Bpath%Source\%Bname%\CMakelists.txt" (
+ if exist "%Bpath%\patch\%Bname%.txt" (
+   copy "%Bpath%\patch\%Bname%.txt" "%Bpath%Source\%Bname%\CMakelists.txt"
+ )
+)
+
 :: 开始 CMake 编译
 if exist "%Bpath%Source\%Bname%" (
 	CMake  %Bpara% -DCMAKE_INSTALL_PREFIX=%BInst% -Thost=%Bhost% -B "%Btemp%" -G %Blang% -A %Bplat% %Bpath%Source\%Bname%
