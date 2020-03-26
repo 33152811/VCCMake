@@ -8,6 +8,7 @@
  -DBUILD_opencv_python2=ON ^
  -DBUILD_opencv_python3=ON ^
  -DBUILD_opencv_world=OFF ^
+ -DBUILD_OPENSSL=ON ^
  -DBUILD_QTDIALOG=OFF ^
  -DBUILD_SHARED_LIBS=OFF ^
  -DBUILD_SHARED=OFF ^
