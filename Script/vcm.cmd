@@ -19,10 +19,8 @@ set "Bpara=%sPara% %Bpara%"
 
 :: 检查是否有 CMakeLists.txt 文件；如果没有，查找 patch 目录下是否有同项目名称的 txt 文本，如果有则复制过来，并重命名为 CMakelists.txt
 if not exist "%Bpath%Source\%Bname%\CMakelists.txt" (
-  echo "%Bpath%Patch\%Bname%.txt" 
  if exist "%Bpath%Patch\%Bname%.txt" (
    copy "%Bpath%Patch\%Bname%.txt" "%Bpath%Source\%Bname%\CMakelists.txt"
-   echo bbbbb
  )
 )
 
