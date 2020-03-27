@@ -37,7 +37,7 @@ set "Buildtype=%CurrentCD% %CompileLang% %Platform1% %Platform2% %Configure% %Se
 :: MSBuild 头文件、库文件搜索路径
 set "INCLUDE=%SetupPath%\include;%CurrentCD%CMake\bin;%INCLUDE%"
 set "LIB=%SetupPath%\lib;%LIB%"
-set "SetEnv=True"
+set "UseEnv=True"
 
 :: 编译源码
 call "%CurrentCD%Script\dlzip" zlib-1.2.11                  https://www.zlib.net/zlib-1.2.11.tar.gz                             %Buildtype% zlib.sln
@@ -52,3 +52,4 @@ call "%CurrentCD%Script\dlzip" sqlite-snapshot-202003121754 https://www.sqlite.o
 call "%CurrentCD%Script\dlgit" openssl                      https://github.com/janbar/openssl-cmake.git                         %Buildtype% openssl.sln
 call "%CurrentCD%Script\dlgit" libssh2                      https://github.com/libssh2/libssh2.git                              %Buildtype% libssh2.sln
 call "%CurrentCD%Script\dlgit" curl                         https://github.com/curl/curl.git                                    %Buildtype% curl.sln
+call "%CurrentCD%Script\dlgit" giflib                         https://github.com/xbmc/giflib.git                                %Buildtype% giflib.sln

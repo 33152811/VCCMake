@@ -16,6 +16,10 @@ set "Platform2=x86"
 set "Configure=Release"
 set "SetupPath=%CurrentCD%VSSDK\%Platform2%"
   
+:: 设置 pkgconfig 目录 
+set "TMP_CONFIG_PATH=%SetupPath%\lib\pkgconfig"
+set "PKG_CONFIG_PATH=%TMP_CONFIG_PATH:\=/%"
+
 :: 设置系统搜索路径；工具、第三方库都放在搜索路径中；也可以放在系统搜索路径中；但最好放在文件中，因为 WINDOWS 系统的系统搜索路径有字符串长度限制；
 @set "sFile=%CurrentCD%Script\px86.txt"
 @set "sPath="
@@ -37,7 +41,7 @@ set "Buildtype=%CurrentCD% %CompileLang% %Platform1% %Platform2% %Configure% %Se
 :: MSBuild 头文件、库文件搜索路径
 set "INCLUDE=%SetupPath%\include;%CurrentCD%CMake\bin;%INCLUDE%"
 set "LIB=%SetupPath%\lib;%LIB%"
-set "SetEnv=True"
+set "UseEnv=True"
 
 :: 编译源码
 call "%CurrentCD%Script\dlzip" zlib-1.2.11                  https://www.zlib.net/zlib-1.2.11.tar.gz                             %Buildtype% zlib.sln
@@ -52,3 +56,5 @@ call "%CurrentCD%Script\dlzip" sqlite-snapshot-202003121754 https://www.sqlite.o
 call "%CurrentCD%Script\dlgit" openssl                      https://github.com/janbar/openssl-cmake.git                         %Buildtype% openssl.sln
 call "%CurrentCD%Script\dlgit" libssh2                      https://github.com/libssh2/libssh2.git                              %Buildtype% libssh2.sln
 call "%CurrentCD%Script\dlgit" curl                         https://github.com/curl/curl.git                                    %Buildtype% curl.sln
+call "%CurrentCD%Script\dlgit" giflib                         https://github.com/xbmc/giflib.git                                %Buildtype% giflib.sln
+call "%CurrentCD%Script\dlgit" libpng                         https://github.com/glennrp/libpng.git                             %Buildtype% libpng.sln
