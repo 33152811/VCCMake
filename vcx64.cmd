@@ -34,6 +34,11 @@ if %BuildLang% == VS2017 (
 )
 set "Buildtype=%CurrentCD% %CompileLang% %Platform1% %Platform2% %Configure% %SetupPath%"
 
+:: MSBuild 头文件、库文件搜索路径
+set "INCLUDE=%SetupPath%\include;%CurrentCD%CMake\bin;%INCLUDE%"
+set "LIB=%SetupPath%\lib;%LIB%"
+set "SetEnv=True"
+
 :: 编译源码
 call "%CurrentCD%Script\dlzip" zlib-1.2.11                  https://www.zlib.net/zlib-1.2.11.tar.gz                             %Buildtype% zlib.sln
 call "%CurrentCD%Script\dlzip" SDL2-2.0.12                  http://www.libsdl.org/release/SDL2-2.0.12.tar.gz                    %Buildtype% sdl2.sln

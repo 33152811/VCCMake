@@ -20,9 +20,19 @@ set "Bpara=%sPara% %Bpara%"
 :: 检查是否有 CMakeLists.txt 文件；如果没有，查找 patch 目录下是否有同项目名称的 txt 文本，如果有则复制过来，并重命名为 CMakelists.txt
 if not exist "%Bpath%Source\%Bname%\CMakelists.txt" (
  if exist "%Bpath%Patch\%Bname%.txt" (
-   copy "%Bpath%Patch\%Bname%.txt" "%Bpath%Source\%Bname%\CMakelists.txt"
- )
+   copy /Y "%Bpath%Patch\%Bname%.txt" "%Bpath%Source\%Bname%\CMakelists.txt" 
+ ) else (
+   echo 没有 CMakelists.txt 文件，不支持编译
+   goto :gEnd
+   )
 )
+
+:: 检查是否有 patch 补丁文件
+ if exist "%Bpath%Patch\%Bname%.patch" (
+   copy /Y "%Bpath%Patch\%Bname%.patch" "%Bpath%Source\%Bname%\%Bname%.patch"
+   cd "%Bpath%Source\%Bname%"
+   git apply "%Bname%.patch"
+ )
 
 :: 开始 CMake 编译
 if exist "%Bpath%Source\%Bname%" (
@@ -46,3 +56,5 @@ title 编译完成，清理临时文件
 	if exist "%Bpath%zerror.log"     del "%Bpath%zerror.log"
 	if exist "%Bpath%zwarns.log"     del "%Bpath%zwarns.log"
 )
+
+:gEnd
