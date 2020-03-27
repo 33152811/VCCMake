@@ -16,6 +16,10 @@ set "Platform2=x64"
 set "Configure=Release"
 set "SetupPath=%CurrentCD%VSSDK\%Platform2%"
   
+:: 设置 pkgconfig 目录 
+set "TMP_CONFIG_PATH=%SetupPath%\lib\pkgconfig"
+set "PKG_CONFIG_PATH=%TMP_CONFIG_PATH:\=/%"
+
 :: 设置系统搜索路径；工具、第三方库都放在搜索路径中；也可以放在系统搜索路径中；但最好放在文件中，因为 WINDOWS 系统的系统搜索路径有字符串长度限制；
 @set "sFile=%CurrentCD%Script\px64.txt"
 @set "sPath="
@@ -52,4 +56,5 @@ call "%CurrentCD%Script\dlzip" sqlite-snapshot-202003121754 https://www.sqlite.o
 call "%CurrentCD%Script\dlgit" openssl                      https://github.com/janbar/openssl-cmake.git                         %Buildtype% openssl.sln
 call "%CurrentCD%Script\dlgit" libssh2                      https://github.com/libssh2/libssh2.git                              %Buildtype% libssh2.sln
 call "%CurrentCD%Script\dlgit" curl                         https://github.com/curl/curl.git                                    %Buildtype% curl.sln
-call "%CurrentCD%Script\dlgit" giflib                         https://github.com/xbmc/giflib.git                                %Buildtype% giflib.sln
+call "%CurrentCD%Script\dlgit" libpng                       https://github.com/glennrp/libpng.git                               %Buildtype% libpng.sln
+call "%CurrentCD%Script\dlgit" giflib                       https://github.com/xbmc/giflib.git                                  %Buildtype% giflib.sln

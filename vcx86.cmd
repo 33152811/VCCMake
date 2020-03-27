@@ -56,5 +56,5 @@ call "%CurrentCD%Script\dlzip" sqlite-snapshot-202003121754 https://www.sqlite.o
 call "%CurrentCD%Script\dlgit" openssl                      https://github.com/janbar/openssl-cmake.git                         %Buildtype% openssl.sln
 call "%CurrentCD%Script\dlgit" libssh2                      https://github.com/libssh2/libssh2.git                              %Buildtype% libssh2.sln
 call "%CurrentCD%Script\dlgit" curl                         https://github.com/curl/curl.git                                    %Buildtype% curl.sln
-call "%CurrentCD%Script\dlgit" giflib                         https://github.com/xbmc/giflib.git                                %Buildtype% giflib.sln
-call "%CurrentCD%Script\dlgit" libpng                         https://github.com/glennrp/libpng.git                             %Buildtype% libpng.sln
+call "%CurrentCD%Script\dlgit" libpng                       https://github.com/glennrp/libpng.git                               %Buildtype% libpng.sln
+call "%CurrentCD%Script\dlgit" giflib                       https://github.com/xbmc/giflib.git                                  %Buildtype% giflib.sln
