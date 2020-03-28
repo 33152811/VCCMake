@@ -23,7 +23,7 @@ if not exist "%Bpath%Source\%Bname%\CMakelists.txt" (
    copy /Y "%Bpath%Patch\%Bname%.txt" "%Bpath%Source\%Bname%\CMakelists.txt" 
  ) else (
    echo 没有 CMakelists.txt 文件，不支持编译
-   goto :gEnd
+   goto bEnd
    )
 )
 
@@ -45,6 +45,12 @@ if exist "%Bpath%Source\%Bname%" (
  /flp1:LogFile=%Bpath%\zerror.log;errorsonly;Verbosity=diagnostic^
  /flp2:LogFile=%Bpath%\zwarns.log;warningsonly;Verbosity=diagnostic
 
+:: 检查编译是否有错误
+  if %ERRORLEVEL% NEQ 0 (
+  echo 编译出现错误，停止编译
+  goto bEnd
+  )
+  
 :: 如果上面 VC 多进程编译没有任何问题，这里就不会再编译了，直接安装了
 	CMake --build "%Btemp%" --config %Bconf% --target install
 	
@@ -57,4 +63,4 @@ title 编译完成，清理临时文件
 	if exist "%Bpath%zwarns.log"     del "%Bpath%zwarns.log"
 )
 
-:gEnd
+:bEnd
