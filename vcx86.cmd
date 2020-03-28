@@ -21,7 +21,7 @@ set "TMP_CONFIG_PATH=%SetupPath%\lib\pkgconfig"
 set "PKG_CONFIG_PATH=%TMP_CONFIG_PATH:\=/%"
 
 :: 设置系统搜索路径；工具、第三方库都放在搜索路径中；也可以放在系统搜索路径中；但最好放在文件中，因为 WINDOWS 系统的系统搜索路径有字符串长度限制；
-@set "sFile=%CurrentCD%Script\px86.txt"
+@set "sFile=%CurrentCD%Script\p%Platform2%.txt"
 @set "sPath="
 @for /f "tokens=*" %%I in (%sFile%) do (set "sPath=!sPath!;%%I")
 set "Path=%CurrentCD%\CMake\bin;%SetupPath%\bin;%SetupPath%\include;%SetupPath%\lib;%sPath%;%Path%"
