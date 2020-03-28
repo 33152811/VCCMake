@@ -11,9 +11,17 @@ set "BInst=%7"
 set "BProj=%8"
 set "Btemp=%Bpath%_Build_"
 
-:: 如果存在独立编译，就使用独立编译；编译 boost 等
-if exist "%Bpath%Script\%Bname%.cmd" (
-   call "%Bpath%Script\%Bname%.cmd" %Bpath%Source\%Bname% %BInst% %Bhost%
+:: 检查是否有 patch 补丁文件
+ if exist "%Bpath%Patch\%Bname%.patch" (
+   copy /Y "%Bpath%Patch\%Bname%.patch" "%Bpath%Source\%Bname%\%Bname%.patch"
+   cd "%Bpath%Source\%Bname%"
+   git apply "%Bname%.patch"
+   del "%Bpath%Source\%Bname%\%Bname%.patch"
+ )
+
+:: 如果存在独立编译，就使用独立编译；编译 CMake 不支持的项目；如：boost 等
+if exist "%Bpath%Single\%Bname%.cmd" (
+   call "%Bpath%Single\%Bname%.cmd" %Bpath%Source\%Bname% %BInst% %Bplat%
    goto bEnd
 )
 
@@ -32,14 +40,6 @@ if not exist "%Bpath%Source\%Bname%\CMakelists.txt" (
    goto bEnd
    )
 ) 
-
-:: 检查是否有 patch 补丁文件
- if exist "%Bpath%Patch\%Bname%.patch" (
-   copy /Y "%Bpath%Patch\%Bname%.patch" "%Bpath%Source\%Bname%\%Bname%.patch"
-   cd "%Bpath%Source\%Bname%"
-   git apply "%Bname%.patch"
-   del "%Bpath%Source\%Bname%\%Bname%.patch"
- )
 
 :: 开始 CMake 编译
 if exist "%Bpath%Source\%Bname%" (
