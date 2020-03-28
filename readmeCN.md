@@ -8,10 +8,12 @@
     Script\dlsvn.cmd ：SVN 方式下载源代码;
     Script\vcp.txt   ：CMake 编译参数;可以随意添加; 只增不减; 除非遇到编译错误;
     Script\vcm.cmd   ：VC    编译; 核心所在;
+    Script\vcc.cmd   ：VC    编译环境检查;
     Script\px86.txt  ：x86   编译时，系统搜索路径; 按照自己机器目录修改;
     Script\px64.txt  ：x64   编译时，系统搜索路径; 按照自己机器目录修改;
     vcx86.cmd        ：编译总开关。启动编译 x86 平台; 支持 VC2017、VC2019;
     vcx64.cmd        ：编译总开关。启动编译 x64 平台; 支持 VC2017、VC2019;
+    vca.cmd          ：要编译的源码都放在这里，可以自己随意添加;
     CMake            ：目录; 放置着编译需要的工具。如CMake、pkgconfig、7z,等等;
 
 ## 编译说明：

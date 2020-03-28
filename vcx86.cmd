@@ -16,4 +16,4 @@ set "Platform2=x86"
 set "Configure=Release"
 set "SetupPath=%CurrentCD%VSSDK\%Platform2%"
   
-"%CurrentCD%\Script\vcs.cmd" %CurrentCD% %BuildLang% %Platform1% %Platform2% %Configure% %SetupPath% 
+"%CurrentCD%\Script\vcc.cmd" %CurrentCD% %BuildLang% %Platform1% %Platform2% %Configure% %SetupPath% 
