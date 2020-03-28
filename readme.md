@@ -7,11 +7,11 @@
     Script \ dlzip.cmd: Download a compressed source code file from the web
     Script \ dlgit.cmd: Download source code in GIT mode
     Script \ dlsvn.cmd: Download source code in SVN mode
-    Script \ vcp.txt  : CMake compilation parameters; You can add it at will, add it without subtraction, unless you get compilation errors;
-    Script \ vcm.cmd  : VC compilation; The core;
-    Script\vcc.cmd    : VC compilation environment check;
     Script \ px86.txt : system search path when compiling x86; Modify according to the machine directory;
     Script \ px64.txt : system search path when compiling x64; Modify according to the machine directory;
+    Script \ vcp.txt  : CMake compilation parameters; You can add it at will, add it without subtraction, unless you get compilation errors;
+    Script \ vcc.cmd  : VC compilation environment check;
+    Script \ vcm.cmd  : VC compilation; The core;
     vcx86.cmd         : Compile master switch. Start compiling for x86 platform; Support VC2017、VC2019;
     vcx64.cmd         : Compile master switch. Start compiling for x64 platform; Support VC2017、VC2019;
     vca.cmd           : The source code to be compiled is placed here, you can add it at will;
