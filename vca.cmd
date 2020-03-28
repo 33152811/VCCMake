@@ -25,3 +25,4 @@ call "%CurrentCD%Script\dlgit" libpng                       https://github.com/g
 call "%CurrentCD%Script\dlgit" giflib                       https://github.com/xbmc/giflib.git                                  %Buildtype% giflib.sln
 call "%CurrentCD%Script\dlgit" harfbuzz                     https://github.com/harfbuzz/harfbuzz.git                            %Buildtype% harfbuzz.sln
 call "%CurrentCD%Script\dlgit" freetype                     https://github.com/winlibs/freetype.git                             %Buildtype% freetype.sln
+call "%CurrentCD%Script\dlgit" xz                           https://git.tukaani.org/xz.git                                      %Buildtype% freetype.sln
