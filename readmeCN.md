@@ -3,6 +3,7 @@
 - [English](readme.md)
 
 ## 文件说明：
+    CMake            ：目录; 放置着编译需要的工具。如CMake、pkgconfig、7z,等等;
     Script\dlzip.cmd ：从网络上下载源代码压缩文件;
     Script\dlgit.cmd ：GIT 方式下载源代码;
     Script\dlsvn.cmd ：SVN 方式下载源代码;
@@ -14,7 +15,6 @@
     vcx86.cmd        ：编译总开关。启动编译 x86 平台; 支持 VC2017、VC2019;
     vcx64.cmd        ：编译总开关。启动编译 x64 平台; 支持 VC2017、VC2019;
     vca.cmd          ：要编译的源码都放在这里，可以自己随意添加;
-    CMake            ：目录; 放置着编译需要的工具。如CMake、pkgconfig、7z,等等;
 
 ## 编译说明：
     编译开始会检查源代码目录是否存在，如果存在，就不在重新下载了;

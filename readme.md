@@ -3,6 +3,7 @@
 - [简体中文](readmeCN.md)
 
 ## Document Description:
+    CMake             : Directory; places the tools needed for compilation. Such as cmake, pkgconfig, 7z, etc;
     Script \ dlzip.cmd: Download a compressed source code file from the web
     Script \ dlgit.cmd: Download source code in GIT mode
     Script \ dlsvn.cmd: Download source code in SVN mode
@@ -14,7 +15,6 @@
     vcx86.cmd         : Compile master switch. Start compiling for x86 platform; Support VC2017、VC2019;
     vcx64.cmd         : Compile master switch. Start compiling for x64 platform; Support VC2017、VC2019;
     vca.cmd           : The source code to be compiled is placed here, you can add it at will;
-    CMake             : Directory; places the tools needed for compilation. Such as cmake, pkgconfig, 7z, etc;
 
 ## Compile specification:
     At the beginning of compilation, the source code directory is checked for existence; 
