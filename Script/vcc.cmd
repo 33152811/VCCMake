@@ -29,7 +29,7 @@ if %BuildLang% == VS2017 (
 )
 
 :: MSBuild 头文件、库文件搜索路径
-set "INCLUDE=%SetupPath%\include;%CurrentCD%CMake\bin;%INCLUDE%"
+set "INCLUDE=%SetupPath%\include;%SetupPath%\include\harfbuzz;%CurrentCD%CMake\bin;%INCLUDE%"
 set "LIB=%SetupPath%\lib;%LIB%"
 set "UseEnv=True"
 
