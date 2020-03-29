@@ -15,3 +15,9 @@ MSBuild.exe %SourceCodePath%\VisualMagick\configure\configure.sln^
  /flp2:LogFile=zxwarns.log;warningsonly;Verbosity=diagnostic
 
 call %SourceCodePath%\VisualMagick\configure\configure.exe
+
+MSBuild.exe %SourceCodePath%\VisualMagick\VisualStaticMT.sln^
+ /nologo /consoleloggerparameters:Verbosity=minimal /maxcpucount /nodeReuse:true^
+ /target:Build /property:Configuration=Release;Platform=%BuildPlatform_%^
+ /flp1:LogFile=zxerror.log;errorsonly;Verbosity=diagnostic^
+ /flp2:LogFile=zxwarns.log;warningsonly;Verbosity=diagnostic
