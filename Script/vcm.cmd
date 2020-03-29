@@ -9,7 +9,7 @@ set "Bhost=%5"
 set "Bconf=%6"
 set "BInst=%7"
 set "BProj=%8"
-set "Btemp=%Bpath%Build\%Bname%"
+set "Btemp=%Bpath%Build\%Bname%\%Bhost%"
 
 :: 检查是否有 patch 补丁文件
  if exist "%Bpath%Patch\%Bname%.patch" (
