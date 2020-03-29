@@ -7,6 +7,7 @@ set "Bulid=%4 %5 %6 %7 %8 %9"
 
 if exist "%Bpath%Source\%Bname%"   goto Compile
 if exist "%Bpath%%Bname%.tar"      goto Unzip2
+if exist "%Bpath%%Bname%.tar.xz"   rename "%Bpath%%Bname%.tar.xz" "%Bpath%%Bname%.tar.gz"
 if exist "%Bpath%%Bname%.tar.gz"   goto Unzip1
 
 echo  обть %Bname%

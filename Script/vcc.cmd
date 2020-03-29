@@ -15,7 +15,7 @@ set "PKG_CONFIG_PATH=%TMP_CONFIG_PATH:\=/%"
 @set "sFile=%CurrentCD%Script\p%Platform2%.txt"
 @set "sPath="
 @for /f "tokens=*" %%I in (%sFile%) do (set "sPath=!sPath!;%%I")
-set "Path=%CurrentCD%\CMake\bin;%SetupPath%\bin;%SetupPath%\include;%SetupPath%\lib;%sPath%;%Path%"
+set "Path=%CurrentCD%\CMake\bin;%CurrentCD%\CMake\bin\jom_1_1_3;%SetupPath%\bin;%SetupPath%\include;%SetupPath%\lib;%sPath%;%Path%"
 
 :: 编译语言
 if %BuildLang% == VS2017 (
@@ -29,16 +29,9 @@ if %BuildLang% == VS2017 (
 )
 
 :: MSBuild 头文件、库文件搜索路径
-set "INCLUDE=%SetupPath%\include;%SetupPath%\include\harfbuzz;%CurrentCD%CMake\bin;%INCLUDE%"
-set "LIB=%SetupPath%\lib;%LIB%"
+set "INCLUDE=%SetupPath%\include;%SetupPath%\include\harfbuzz;%SetupPath%\QT5\static\include;%CurrentCD%CMake\bin;%INCLUDE%"
+set "LIB=%SetupPath%\lib;%SetupPath%\QT5\static\lib;%LIB%"
 set "UseEnv=True"
-
-:: 检查是否有 unistd.h 文件
-if not exist "%SetupPath%\include\unistd.h" (
-  if exist "%CurrentCD%CMake\bin\unistd.h" (
-  copy /Y "%CurrentCD%CMake\bin\unistd.h" "%SetupPath%\include\unistd.h"
-  )
-)
 
 :: 编译源码
 "%CurrentCD%vca.cmd" %CurrentCD% %CompileLang% %Platform1% %Platform2% %Configure% %SetupPath%

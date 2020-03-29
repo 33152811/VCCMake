@@ -34,3 +34,7 @@ call "%CurrentCD%Script\dlgit" openssl                      https://github.com/j
 call "%CurrentCD%Script\dlgit" cares                        https://github.com/c-ares/c-ares.git                                %Buildtype% cares.sln
 call "%CurrentCD%Script\dlgit" nghttp2                      https://github.com/nghttp2/nghttp2.git                              %Buildtype% nghttp2.sln
 call "%CurrentCD%Script\dlgit" ImageMagick-windows          https://github.com/ImageMagick/ImageMagick-windows.git              %Buildtype% nghttp2.sln
+call "%CurrentCD%Script\dlzip" llvm-10.0.0.src              https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/llvm-10.0.0.src.tar.xz   %Buildtype% llvm.sln
+call "%CurrentCD%Script\dlzip" clang-10.0.0.src             https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang-10.0.0.src.tar.xz  %Buildtype% clang.sln
+call "%CurrentCD%Script\dlgit" QT5                          --branch 5.15 https://github.com/qt/qt5.git                                                    %Buildtype% QT5.sln
+call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz                                     %Buildtype% VTK.sln
