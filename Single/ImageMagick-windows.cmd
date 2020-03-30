@@ -6,17 +6,17 @@ set BuildPlatform_=%3
 
 cd %SourceCodePath%
 
-bash --login -i -c "./CloneRepositories.sh https://github.com/ImageMagick full"
+bash --login -i -c "%SourceCodePath%/CloneRepositories.sh https://github.com/ImageMagick full"
 
-MSBuild.exe .\VisualMagick\configure\configure.sln^
+MSBuild.exe %SourceCodePath%\VisualMagick\configure\configure.sln^
  /nologo /consoleloggerparameters:Verbosity=minimal /maxcpucount /nodeReuse:true^
  /target:Build /property:Configuration=Release;Platform=%BuildPlatform_%^
  /flp1:LogFile=zxerror.log;errorsonly;Verbosity=diagnostic^
  /flp2:LogFile=zxwarns.log;warningsonly;Verbosity=diagnostic
 
-call .\VisualMagick\configure\configure.exe
+call ".\VisualMagick\configure\configure.exe"
 
-MSBuild.exe .\VisualMagick\VisualStaticMT.sln^
+MSBuild.exe %SourceCodePath%\VisualMagick\VisualStaticMT.sln^
  /nologo /consoleloggerparameters:Verbosity=minimal /maxcpucount /nodeReuse:true^
  /target:Build /property:Configuration=Release;Platform=%BuildPlatform_%^
  /flp1:LogFile=zxerror.log;errorsonly;Verbosity=diagnostic^

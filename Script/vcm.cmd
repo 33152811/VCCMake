@@ -19,9 +19,9 @@ set "Btemp=%Bpath%Build\%Bname%\%Bhost%"
    del "%Bpath%Source\%Bname%\%Bname%.patch"
  )
 
-:: 如果存在独立编译，就使用独立编译；编译 CMake 不支持的项目；如：boost 等
+:: 如果存在独立编译，就使用独立编译；编译 CMake 不支持的项目；如：boost, QT 等
 if exist "%Bpath%Single\%Bname%.cmd" (
-   call "%Bpath%Single\%Bname%.cmd" %Bpath%Source\%Bname% %BInst% %Bplat%
+   call "%Bpath%Single\%Bname%.cmd" %Bpath%Source\%Bname% %BInst% %Bplat% %Blang%
    goto bEnd
 )
 
