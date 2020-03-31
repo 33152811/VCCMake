@@ -7,13 +7,27 @@ set "Bulid=%4 %5 %6 %7 %8 %9"
 
 if exist "%Bpath%Source\%Bname%"   goto Compile
 if exist "%Bpath%%Bname%.tar"      goto Unzip2
-if exist "%Bpath%%Bname%.tar.xz"   rename "%Bpath%%Bname%.tar.xz" "%Bpath%%Bname%.tar.gz"
 if exist "%Bpath%%Bname%.tar.gz"   goto Unzip1
+
+if exist "%Bpath%%Bname%.tar.xz" (
+  echo  解压缩 %Bname%
+  title 解压缩 %Bname%
+   7z x "%Bpath%%Bname%.tar.xz" -o"%Bpath%"
+   7z x "%Bpath%%Bname%.tar" -o"%Bpath%Source\"
+   goto Compile
+  )
 
 echo  下载 %Bname%
 title 下载 %Bname%
- curl -C - -O %Bhttp%
-  
+ curl -C - -OL %Bhttp%
+ if exist "%Bpath%%Bname%.tar.xz" (
+  echo  解压缩 %Bname%
+  title 解压缩 %Bname%
+   7z x "%Bpath%%Bname%.tar.xz" -o"%Bpath%"
+   7z x "%Bpath%%Bname%.tar" -o"%Bpath%Source\"
+   goto Compile
+ )
+
 :Unzip1
 echo  解压缩 %Bname%
 title 解压缩 %Bname%

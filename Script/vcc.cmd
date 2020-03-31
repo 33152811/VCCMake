@@ -15,7 +15,7 @@ set "PKG_CONFIG_PATH=%TMP_CONFIG_PATH:\=/%"
 @set "sFile=%CurrentCD%Script\p%Platform2%.txt"
 @set "sPath="
 @for /f "tokens=*" %%I in (%sFile%) do (set "sPath=!sPath!;%%I")
-set "Path=%CurrentCD%\CMake\bin;%CurrentCD%\CMake\bin\jom_1_1_3;%SetupPath%\bin;%SetupPath%\include;%SetupPath%\lib;%sPath%;%Path%"
+set "Path=%CurrentCD%CMake\bin;%CurrentCD%CMake\bin\jom_1_1_3;%SetupPath%\bin;%SetupPath%\include;%SetupPath%\lib;%sPath%;%Path%"
 
 :: ±‡“Î”Ô—‘
 if %BuildLang% == VS2017 (
