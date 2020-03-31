@@ -19,7 +19,7 @@ if exist "%Bpath%%Bname%.tar.xz" (
 
 echo  下载 %Bname%
 title 下载 %Bname%
- curl -C - -OL %Bhttp%
+ curl -x 127.0.0.1:41081 --connect-timeout 30 --retry 10 --retry-delay 5 -C - -OL %Bhttp%
  if exist "%Bpath%%Bname%.tar.xz" (
   echo  解压缩 %Bname%
   title 解压缩 %Bname%

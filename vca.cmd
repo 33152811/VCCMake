@@ -36,7 +36,7 @@ rem call "%CurrentCD%Script\dlgit" openssl                      https://github.c
 rem call "%CurrentCD%Script\dlgit" cares                        https://github.com/c-ares/c-ares.git                                %Buildtype% cares.sln
 rem call "%CurrentCD%Script\dlgit" nghttp2                      https://github.com/nghttp2/nghttp2.git                              %Buildtype% nghttp2.sln
 rem call "%CurrentCD%Script\dlgit" ceres                        https://github.com/ceres-solver/ceres-solver.git                    %Buildtype% ceres.sln
-call "%CurrentCD%Script\dlzip" llvm-10.0.0.src              https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/llvm-10.0.0.src.tar.xz    %Buildtype% llvm.sln
-call "%CurrentCD%Script\dlzip" clang-10.0.0.src             https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang-10.0.0.src.tar.xz   %Buildtype% clang.sln
-call "%CurrentCD%Script\dlzip" QT5                          http://download.qt.io/archive/qt/5.14/5.14.1/single/qt-everywhere-src-5.14.1.tar.xz             %Buildtype% QT5.sln
-call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz                                      %Buildtype% VTK.sln
+rem call "%CurrentCD%Script\dlzip" llvm-10.0.0.src              https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/llvm-10.0.0.src.tar.xz    %Buildtype% llvm.sln
+rem call "%CurrentCD%Script\dlzip" clang-10.0.0.src             https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang-10.0.0.src.tar.xz   %Buildtype% clang.sln
+call "%CurrentCD%Script\dlzip" qt-everywhere-src-5.14.1     http://download.qt.io/archive/qt/5.14/5.14.1/single/qt-everywhere-src-5.14.1.tar.xz             %Buildtype% QT5.sln
+rem call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz                                      %Buildtype% VTK.sln
