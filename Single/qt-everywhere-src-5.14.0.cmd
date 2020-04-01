@@ -20,6 +20,6 @@ rem    git apply "%SourceProjName%.patch"
 rem    del "%BakupCurrentCD%\Source\%SourceProjName%\%SourceProjName%.patch"
 rem  )
 
-configure -confirm-license -opensource -platform win32-msvc -mp -debug-and-release -static -prefix "%QTInstallPath%" -nomake examples  -nomake tests
+rem call configure -confirm-license -opensource -platform win32-msvc -mp -debug-and-release -static -prefix "%QTInstallPath%" -nomake examples  -nomake tests
 call jom
 call jom install
