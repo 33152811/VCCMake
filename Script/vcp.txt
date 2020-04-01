@@ -18,6 +18,7 @@
  -DBUILD_TESTING=OFF ^
  -DBUILD_TESTS=OFF ^
  -DBUILD_THIRDPARTY=ON ^
+ -DBUILD_TRAINING_TOOLS=OFF ^
  -DBUILD_WITH_STATIC_CRT=ON ^
  -DBoost_USE_STATIC_RUNTIME=ON ^
  -DCEGUI_MSVC_STATIC_RUNTIME=ON ^
@@ -25,6 +26,8 @@
  -DCMAKE_BUILD_TYPE=Release ^
  -DCMAKE_C_FLAGS_DEBUG="/MT /O2 /Ob2 /DNDEBUG /Qspectre" ^
  -DCMAKE_C_FLAGS_RELEASE="/MT /O2 /Ob2 /DNDEBUG /Qspectre" ^
+ -DCMAKE_C_STANDARD_LIBRARIES="kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib winmm.lib liblzma.lib" ^
+ -DCMAKE_CPP_STANDARD_LIBRARIES="kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib winmm.lib liblzma.lib" ^
  -DCMAKE_CONFIGURATION_TYPES=Release ^
  -DCMAKE_CXX_FLAGS_DEBUG="/MT /O2 /Ob2 /DNDEBUG /Qspectre" ^
  -DCMAKE_CXX_FLAGS_RELEASE="/MT /O2 /Ob2 /DNDEBUG /Qspectre" ^
