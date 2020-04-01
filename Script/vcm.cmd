@@ -31,14 +31,15 @@ set "sPara="
 for /f "tokens=*" %%I in (%sFile%) do (set "sPara=!sPara! %%I")
 set "Bpara=%sPara% %Bpara%"
 
-:: 检查是否有 CMakeLists.txt 文件；如果没有，查找 patch 目录下是否有同项目名称的 txt 文本，如果有则复制过来，并重命名为 CMakelists.txt
-if not exist "%Bpath%Source\%Bname%\CMakelists.txt" (
+:: 查找 patch 目录下是否有同项目名称的 txt 文本，如果有则复制过来，并重命名为 CMakelists.txt
  if exist "%Bpath%Patch\%Bname%.txt" (
    copy /Y "%Bpath%Patch\%Bname%.txt" "%Bpath%Source\%Bname%\CMakelists.txt" 
- ) else (
+)
+
+:: 检查是否有 CMakeLists.txt 文件；如果没有，退出编译
+if not exist "%Bpath%Source\%Bname%\CMakelists.txt" (
    echo 没有 CMakelists.txt 文件，不支持编译
    goto bEnd
-   )
 ) 
 
 :: 开始 CMake 编译
