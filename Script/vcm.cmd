@@ -71,8 +71,11 @@ echo  编译完成，清理临时文件
 title 编译完成，清理临时文件
   :: 源代码还原
   cd "%Bpath%Source\%Bname%"
-  git clean -d  -fx -f
-  git checkout .
+  if exist "%Bpath%Source\%Bname%\.git\" (
+    git clean -d  -fx -f
+    git checkout .
+  )
+  
   :: 删除临时文件 
 	if exist "%Bpath%%Bname%.tar.gz" del "%Bpath%%Bname%.tar.gz"
 	if exist "%Bpath%%Bname%.tar"    del "%Bpath%%Bname%.tar"
