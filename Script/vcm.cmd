@@ -47,6 +47,11 @@ if exist "%Bpath%Source\%Bname%" (
 	CMake  %Bpara% -DCMAKE_INSTALL_PREFIX=%BInst% -Thost=%Bhost% -B "%Btemp%" -G %Blang% -A %Bplat% %Bpath%Source\%Bname%
 	CMake "%Btemp%"
 	
+:: 编译之前，检查是否有工程文件需要修改的补丁，有则给工程文件打补丁 (xz 工程有问题，不能编译 MT 类型)
+if exist "%Bpath%Patch\%Bname%_sln.cmd" (
+  call "%Bpath%Patch\%Bname%_sln.cmd" %Btemp%
+)
+
 :: VC 多进程编译；加快编译速度；如果工程名称不正确，不影响编译，只是不能使用 VC 的多进程编译。多进程编译会起很多进程编译，编译大工程时，会拖慢机器相应速度
 	MSBuild.exe %Btemp%\%Bproj% /nologo /consoleloggerparameters:Verbosity=minimal /maxcpucount /nodeReuse:true^
  /target:Build /property:Configuration=%Bconf%;Platform=%Bplat%^
