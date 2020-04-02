@@ -1,0 +1,18 @@
+diff --git "a/libxml.h" "b/libxml.h"
+index 1090729c..ffcd5711 100644
+--- "a/libxml.h"
++++ "b/libxml.h"
+@@ -20,6 +20,13 @@
+ #endif
+ #endif
+ 
++#ifndef GETHOSTBYNAME_ARG_CAST
++#define GETHOSTBYNAME_ARG_CAST (char *)
++#endif
++#ifndef SEND_ARG2_CAST
++#define SEND_ARG2_CAST (char *)
++#endif
++
+ #if defined(macintosh)
+ #include "config-mac.h"
+ #elif defined(_WIN32_WCE)
