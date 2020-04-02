@@ -1,0 +1,13 @@
+diff --git "a/ccmain/equationdetect.cpp" "b/ccmain/equationdetect.cpp"
+index 07a3c491..5d249149 100644
+--- "a/ccmain/equationdetect.cpp"
++++ "b/ccmain/equationdetect.cpp"
+@@ -240,7 +240,7 @@ BlobSpecialTextType EquationDetect::EstimateTypeForUnichar(
+     static GenericVector<UNICHAR_ID> ids_to_exclude;
+     if (ids_to_exclude.empty()) {
+       static const STRING kCharsToEx[] = {"'", "`", "\"", "\\", ",", ".",
+-          "„Äà", "„Äâ", "„Ää", "„Äã", "„Äç", "„Äå", ""};
++          "°¥", "°µ", "°∂", "°∑", "°π", "°∏", ""};
+       int i = 0;
+       while (kCharsToEx[i] != "") {
+         ids_to_exclude.push_back(
