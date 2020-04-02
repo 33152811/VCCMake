@@ -1,45 +1,13 @@
- CMakeLists.txt            | 3 +++
- ccmain/equationdetect.cpp | 2 +-
- 2 files changed, 4 insertions(+), 1 deletion(-)
-
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 25ded3c2..c95754b0 100644
---- a/CMakeLists.txt
-+++ b/CMakeLists.txt
-@@ -49,6 +49,7 @@ project(tesseract C CXX)
- set(VERSION_MAJOR 3)
- set(VERSION_MINOR 05)
- set(VERSION_PLAIN ${VERSION_MAJOR}.${VERSION_MINOR})
+diff --git "a/CMakeLists.txt" "b/CMakeLists.txt"
+index 9e67388b..b9aa5fa6 100644
+--- "a/CMakeLists.txt"
++++ "b/CMakeLists.txt"
+@@ -10,6 +10,8 @@
+ 
+ cmake_minimum_required(VERSION 3.7 FATAL_ERROR)
+ 
 +set(STATIC 1)
- 
- set(MINIMUM_LEPTONICA_VERSION 1.74)
- 
-@@ -211,6 +212,7 @@ set(tesseract_src ${tesseract_src}
-     api/pdfrenderer.cpp
- )
- 
 +
- add_library                     (libtesseract ${LIBRARY_TYPE} ${tesseract_src} ${tesseract_hdr})
- if (NOT STATIC)
- target_compile_definitions      (libtesseract
-@@ -229,6 +231,7 @@ endif()
- 
- if (NOT CPPAN_BUILD)
-     target_link_libraries       (libtesseract ${Leptonica_LIBRARIES})
-+    target_link_libraries       (libtesseract liblzma)
-     export(TARGETS libtesseract FILE ${CMAKE_BINARY_DIR}/TesseractTargets.cmake)
- else()
-     target_link_libraries       (libtesseract pvt.cppan.demo.danbloomberg.leptonica)
-diff --git a/ccmain/equationdetect.cpp b/ccmain/equationdetect.cpp
-index 07a3c491..5d249149 100644
---- a/ccmain/equationdetect.cpp
-+++ b/ccmain/equationdetect.cpp
-@@ -240,7 +240,7 @@ BlobSpecialTextType EquationDetect::EstimateTypeForUnichar(
-     static GenericVector<UNICHAR_ID> ids_to_exclude;
-     if (ids_to_exclude.empty()) {
-       static const STRING kCharsToEx[] = {"'", "`", "\"", "\\", ",", ".",
--          "„Äà", "„Äâ", "„Ää", "„Äã", "„Äç", "„Äå", ""};
-+          "°¥", "°µ", "°∂", "°∑", "°π", "°∏", ""};
-       int i = 0;
-       while (kCharsToEx[i] != "") {
-         ids_to_exclude.push_back(
+ # In-source builds are disabled.
+ if ("${CMAKE_CURRENT_SOURCE_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
+     message(FATAL_ERROR
