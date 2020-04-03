@@ -3,7 +3,7 @@
 - [English](readme.md)
 
 ## 文件说明：
-    CMake            ：目录; 放置着编译需要的工具。如CMake、pkgconfig、7z,等等;
+    Tools            ：目录; 放置着编译需要的工具。如CMake、pkgconfig、7z,等等;
     Script\dlzip.cmd ：从网络上下载源代码压缩文件;
     Script\dlgit.cmd ：GIT 方式下载源代码;
     Script\dlsvn.cmd ：SVN 方式下载源代码;

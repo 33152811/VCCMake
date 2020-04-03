@@ -3,7 +3,7 @@
 - [简体中文](readmeCN.md)
 
 ## Document Description:
-    CMake             : Directory; places the tools needed for compilation. Such as cmake, pkgconfig, 7z, etc;
+    Tools             : Directory; places the tools needed for compilation. Such as cmake, pkgconfig, 7z, etc;
     Script \ dlzip.cmd: Download a compressed source code file from the web
     Script \ dlgit.cmd: Download source code in GIT mode
     Script \ dlsvn.cmd: Download source code in SVN mode
