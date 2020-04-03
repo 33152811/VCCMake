@@ -4,7 +4,6 @@ E:\Source\Eigen
 F:\Green\Language\ActivePerl\bin
 F:\Green\Language\apache-ant-1.10.1\bin
 F:\Green\Language\BISON\bin
-F:\Green\Language\CMake\3.15.2\bin
 F:\Green\Language\doxygen\bin
 F:\Green\Language\Graphviz 2.38\bin
 F:\Green\Language\Go\bin
@@ -35,7 +34,4 @@ F:\Green\Language\Matlab\R2018b\bin
 F:\Green\Language\Matlab\R2018b\extern\include
 F:\Green\Language\Matlab\R2018b\extern\lib\win32\microsoft
 F:\Green\Language\OCPWin\bin
-F:\Green\Language\Python\3.6.5\x86
-F:\Green\Language\Python\3.6.5\x86\libs
-F:\Green\Language\Python\3.6.5\x86\Scripts
 F:\Green\Language\swigwin-4.0.1
