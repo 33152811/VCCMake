@@ -15,21 +15,21 @@ set "PKG_CONFIG_PATH=%TMP_CONFIG_PATH:\=/%"
 @set "sFile=%CurrentCD%Script\p%Platform2%.txt"
 @set "sPath="
 @for /f "tokens=*" %%I in (%sFile%) do (set "sPath=!sPath!;%%I")
-set "Path=%CurrentCD%CMake\bin;%CurrentCD%CMake\bin\jom_1_1_3;%SetupPath%\bin;%SetupPath%\include;%SetupPath%\lib;%sPath%;%Path%"
+set "Path=%CurrentCD%Tools\CMake\bin;%CurrentCD%Tools\jom_1_1_3;%CurrentCD%Tools\Meson;%CurrentCD%Tools\Python3.8;%SetupPath%\bin;%SetupPath%\include;%SetupPath%\lib;%sPath%;%Path%"
 
 :: 编译语言
 if %BuildLang% == VS2017 (
   set CompileLang="Visual Studio 15 2017"
-  set "VSWHERE="%CurrentCD%CMake\bin\vswhere.exe" -property installationPath -requires Microsoft.Component.MSBuild Microsoft.VisualStudio.Component.VC.ATLMFC Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -version [15.0,16.0^)"
+  set "VSWHERE="%CurrentCD%Tools\CMake\bin\vswhere.exe" -property installationPath -requires Microsoft.Component.MSBuild Microsoft.VisualStudio.Component.VC.ATLMFC Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -version [15.0,16.0^)"
   for /f "delims=" %%A IN ('!VSWHERE!') DO call "%%A\Common7\Tools\vsdevcmd.bat" -no_logo -arch=%Platform2%
 ) else (
   set CompileLang="Visual Studio 16 2019"
-  set "VSWHERE="%CurrentCD%CMake\bin\vswhere.exe" -property installationPath -requires Microsoft.Component.MSBuild Microsoft.VisualStudio.Component.VC.ATLMFC Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -version [16.0,17.0^)"
+  set "VSWHERE="%CurrentCD%Tools\CMake\bin\vswhere.exe" -property installationPath -requires Microsoft.Component.MSBuild Microsoft.VisualStudio.Component.VC.ATLMFC Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -version [16.0,17.0^)"
   for /f "delims=" %%A IN ('!VSWHERE!') DO call "%%A\Common7\Tools\vsdevcmd.bat" -no_logo -arch=%Platform2%
 )
 
 :: MSBuild 头文件、库文件搜索路径
-set "INCLUDE=%SetupPath%\include;%SetupPath%\include\harfbuzz;%SetupPath%\QT5\static\include;%CurrentCD%CMake\bin;%INCLUDE%"
+set "INCLUDE=%SetupPath%\include;%SetupPath%\include\harfbuzz;%SetupPath%\QT5\static\include;%INCLUDE%"
 set "LIB=%SetupPath%\lib;%SetupPath%\QT5\static\lib;%LIB%"
 set "UseEnv=True"
 
