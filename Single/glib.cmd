@@ -24,14 +24,20 @@ cd %BuildPath%
 
 meson %SourceCodePath% --buildtype=release --prefix=%InstallSDKPath% --backend=vs
 
+:: 字符串搜索替换
+rem powershell -Command "(gc %liblzmavcxprojName%) -replace '%strMD%', '%strMT%' | Out-File %liblzmavcxprojName%"
+powershell -Command "(gc %liblzmavcxprojName%) -replace '%strMD%', '%strMT%' | Out-File %liblzmavcxprojName%"
+
+
 MSBuild.exe %SourceProjName%.sln /nologo /consoleloggerparameters:Verbosity=minimal /maxcpucount /nodeReuse:true^
- /target:Build /property:Configuration=Release;Platform=%BuildHostX8664%^
+ /target:Build ^
+ /property:Configuration=Release;Platform=%BuildPlatform_%;DefineConstants="_VISUALC_;NeedFunctionPrototypes;FFI_BUILDING;GIO_COMPILATION;GLIB_COMPILATION;GOBJECT_COMPILATION;HAVE_CONFIG_H;LINK_SIZE=2;MATCH_LIMIT=10000000;MATCH_LIMIT_RECURSION=10000000;MAX_NAME_SIZE=32;MAX_NAME_COUNT=10000;MAX_DUPLENGTH=30000;NEWLINE=-1;PCRE_STATIC;POSIX_MALLOC_THRESHOLD=10;SUPPORT_UCP;SUPPORT_UTF8;_LIB"^
  /flp1:LogFile=zerror.log;errorsonly;Verbosity=diagnostic^
  /flp2:LogFile=zwarns.log;warningsonly;Verbosity=diagnostic
 
-  :: 源代码还原
-  cd "%Bpath%Source\%Bname%"
-  if exist "%Bpath%Source\%Bname%\.git\" (
-    git clean -d  -fx -f
-    git checkout .
+rem   :: 源代码还原
+rem   cd "%Bpath%Source\%Bname%"
+rem   if exist "%Bpath%Source\%Bname%\.git\" (
+rem     git clean -d  -fx -f
+rem     git checkout .
   )
