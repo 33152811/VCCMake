@@ -13,7 +13,7 @@ set "Btemp=%Bpath%Build\%Bname%\%Bhost%"
 
 :: 如果存在独立编译，就使用独立编译；编译 CMake 不支持的项目；如：boost, QT 等
 if exist "%Bpath%Single\%Bname%.cmd" (
-   call "%Bpath%Single\%Bname%.cmd" %Bpath%Source\%Bname% %BInst% %Bplat% %Blang% %Bpath% %Bname%
+   call "%Bpath%Single\%Bname%.cmd" %Bpath%Source\%Bname% %BInst% %Bplat% %Blang% %Bpath% %Bname% %Bhost%
    goto bEnd
 )
 
