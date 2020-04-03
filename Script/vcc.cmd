@@ -12,10 +12,14 @@ set "TMP_CONFIG_PATH=%SetupPath%\lib\pkgconfig"
 set "PKG_CONFIG_PATH=%TMP_CONFIG_PATH:\=/%"
 
 :: 设置系统搜索路径；工具、第三方库都放在搜索路径中；也可以放在系统搜索路径中；但最好放在文件中，因为 WINDOWS 系统的系统搜索路径有字符串长度限制；
-@set "sFile=%CurrentCD%Script\p%Platform2%.txt"
-@set "sPath="
-@for /f "tokens=*" %%I in (%sFile%) do (set "sPath=!sPath!;%%I")
-set "Path=%CurrentCD%Tools\CMake\bin;%CurrentCD%Tools\jom_1_1_3;%CurrentCD%Tools\Meson;%CurrentCD%Tools\Python3.8;%SetupPath%\bin;%SetupPath%\include;%SetupPath%\lib;%sPath%;%Path%"
+set "sFile=%CurrentCD%Script\p%Platform2%.txt"
+if exist %sFile% (
+  set "sPath="
+  for /f "tokens=*" %%I in (%sFile%) do (set "sPath=!sPath!;%%I")
+  set "Path=%CurrentCD%Tools\CMake\bin;%CurrentCD%Tools\jom_1_1_3;%CurrentCD%Tools\Meson;%CurrentCD%Tools\Perl;%CurrentCD%Tools\Python3.8;%SetupPath%\bin;%sPath%;%Path%"
+) else (
+  set "Path=%CurrentCD%Tools\CMake\bin;%CurrentCD%Tools\jom_1_1_3;%CurrentCD%Tools\Meson;%CurrentCD%Tools\Perl;%CurrentCD%Tools\Python3.8;%SetupPath%\bin;%Path%"
+)
 
 :: 编译语言
 if %BuildLang% == VS2017 (
