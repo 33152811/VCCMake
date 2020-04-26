@@ -50,10 +50,12 @@ rem call "%CurrentCD%Script\dlgit" fribidi-cmake                https://github.c
 rem call "%CurrentCD%Script\dlgit" doxygen                      https://github.com/doxygen/doxygen.git                              %Buildtype% doxygen.sln
 rem call "%CurrentCD%Script\dlgit" pcre                         https://github.com/svn2github/pcre.git                              %Buildtype% pcre.sln
 rem call "%CurrentCD%Script\dlgit" pcre2                        svn://vcs.exim.org/pcre2                                            %Buildtype% pcre2.sln
-call "%CurrentCD%Script\dlgit" glib                         https://github.com/GNOME/glib.git                                   %Buildtype% glib.sln
+rem call "%CurrentCD%Script\dlgit" glib                         https://github.com/GNOME/glib.git                                   %Buildtype% glib.sln
 rem call "%CurrentCD%Script\dlgit" tinyxml2                     https://github.com/leethomason/tinyxml2.git                         %Buildtype% tinyxml2.sln
 rem call "%CurrentCD%Script\dlzip" llvm-10.0.0.src              https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/llvm-10.0.0.src.tar.xz    %Buildtype% llvm.sln
 rem call "%CurrentCD%Script\dlzip" clang-10.0.0.src             https://github.com/llvm/llvm-project/releases/download/llvmorg-10.0.0/clang-10.0.0.src.tar.xz   %Buildtype% clang.sln
 rem call "%CurrentCD%Script\dlzip" qt-everywhere-src-5.14.0     http://download.qt.io/archive/qt/5.14/5.14.0/single/qt-everywhere-src-5.14.0.tar.xz             %Buildtype% QT5.sln
 rem call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz                                      %Buildtype% VTK.sln
 rem call "%CurrentCD%Script\dlgit" CastXML                      https://github.com/CastXML/CastXML.git                                %Buildtype% CastXML.sln
+rem call "%CurrentCD%Script\dlgit" qTox                         https://github.com/qTox/qTox.git                                   %Buildtype% qTox.sln
+call "%CurrentCD%Script\dlgit" pytorch                      https://github.com/pytorch/pytorch.git                             %Buildtype% Caffe2.sln
