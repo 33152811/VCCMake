@@ -11,12 +11,6 @@ set "BInst=%7"
 set "BProj=%8"
 set "Btemp=%Bpath%Build\%Bname%\%Bhost%"
 
-:: 如果存在独立编译，就使用独立编译；编译 CMake 不支持的项目；如：boost, QT 等
-if exist "%Bpath%Single\%Bname%.cmd" (
-   call "%Bpath%Single\%Bname%.cmd" %Bpath%Source\%Bname% %BInst% %Bplat% %Blang% %Bpath% %Bname% %Bhost%
-   goto bEnd
-)
-
 :: 检查是否有 patch 补丁文件
  if exist "%Bpath%Patch\%Bname%.patch" (
    copy /Y "%Bpath%Patch\%Bname%.patch" "%Bpath%Source\%Bname%\%Bname%.patch"
@@ -24,6 +18,12 @@ if exist "%Bpath%Single\%Bname%.cmd" (
    git apply "%Bname%.patch"
    del "%Bpath%Source\%Bname%\%Bname%.patch"
  )
+
+:: 如果存在独立编译，就使用独立编译；编译 CMake 不支持的项目；如：boost, QT 等
+if exist "%Bpath%Single\%Bname%.cmd" (
+   call "%Bpath%Single\%Bname%.cmd" %Bpath% %BInst% %Bname% %Bplat% %Blang% %Bhost% %Bconf%
+   goto bEnd
+)
 
 :: 设置 CMake 编译参数
 set "sFile=%Bpath%Script\vcp.txt"
