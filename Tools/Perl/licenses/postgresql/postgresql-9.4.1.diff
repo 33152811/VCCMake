@@ -1,0 +1,9 @@
+diff -r -u -w --strip-trailing-cr postgresql-9.4.1.original/src/template/win32 postgresql-9.4.1/src/template/win32
+--- postgresql-9.4.1.original/src/template/win32	2015-05-19 13:38:07.793180500 +0200
++++ postgresql-9.4.1/src/template/win32	2015-05-19 13:36:06.244039500 +0200
+@@ -3,4 +3,4 @@
+ # --allow-multiple-definition is required to link pg_dump because it finds
+ # pg_toupper() etc. in both libpq and pgport
+ # --disable-auto-import is to ensure we get MSVC-like linking behavior
+-LDFLAGS="-Wl,--allow-multiple-definition -Wl,--disable-auto-import"
++LDFLAGS="-Wl,--allow-multiple-definition"

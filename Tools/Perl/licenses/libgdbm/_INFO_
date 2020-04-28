@@ -1,0 +1,3 @@
+Package: gdbm-1.10
+Patch: gdbm-1.10.diff
+Homepage: http://www.gnu.org/software/gdbm/

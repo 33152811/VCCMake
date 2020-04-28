@@ -1,0 +1,3 @@
+Package: openssl-1.0.2g
+Sources: http://www.openssl.org/source/openssl-1.0.2g.tar.gz
+Homepage: http://www.openssl.org/
