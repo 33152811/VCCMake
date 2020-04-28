@@ -35,9 +35,5 @@ F:\Green\Language\Matlab\R2018b
 F:\Green\Language\Matlab\R2018b\bin
 F:\Green\Language\Matlab\R2018b\extern\include
 F:\Green\Language\Matlab\R2018b\extern\lib\win64\microsoft
-F:\Green\Language\ZVC\x64\QT5\static
-F:\Green\Language\ZVC\x64\QT5\static\bin
-F:\Green\Language\ZVC\x64\QT5\static\include
-F:\Green\Language\ZVC\x64\QT5\static\lib
 F:\Green\Language\OCaml64
 F:\Green\Language\OCaml64\bin

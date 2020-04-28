@@ -35,8 +35,3 @@ F:\Green\Language\Matlab\R2018b\extern\include
 F:\Green\Language\Matlab\R2018b\extern\lib\win32\microsoft
 F:\Green\Language\OCPWin\bin
 F:\Green\Language\swigwin-4.0.1
-F:\Green\Language\ZVC\x86\QT5\static
-F:\Green\Language\ZVC\x86\QT5\static\bin
-F:\Green\Language\ZVC\x86\QT5\static\include
-F:\Green\Language\ZVC\x86\QT5\static\lib
-F:\Green\Language\ZVC\x86\QT5\static\lib\CMake
