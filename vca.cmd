@@ -34,7 +34,7 @@ rem call "%CurrentCD%Script\dlgit" harfbuzz                     https://github.c
 rem call "%CurrentCD%Script\dlgit" freetype                     https://github.com/winlibs/freetype.git                             %Buildtype% freetype.sln
 rem call "%CurrentCD%Script\dlgit" hdf5                         https://github.com/live-clones/hdf5.git                             %Buildtype% hdf5.sln
 rem call "%CurrentCD%Script\dlgit" snappy                       https://github.com/willyd/snappy.git                                %Buildtype% snappy.sln
-rem call "%CurrentCD%Script\dlgit" libiconv                     https://github.com/LuaDist/libiconv.git                              %Buildtype% libiconv.sln
+rem call "%CurrentCD%Script\dlgit" libiconv                     https://github.com/LuaDist/libiconv.git                             %Buildtype% libiconv.sln
 rem call "%CurrentCD%Script\dlgit" libxml2                      https://github.com/GNOME/libxml2.git                                %Buildtype% xml2.sln
 rem call "%CurrentCD%Script\dlgit" PDCurses                     https://github.com/Bill-Gray/PDCurses.git                           %Buildtype% PDCurses.sln
 rem call "%CurrentCD%Script\dlgit" fish                         https://git.sr.ht/~faho/fish                                        %Buildtype% fish.sln
@@ -52,9 +52,9 @@ rem call "%CurrentCD%Script\dlgit" pcre                         https://github.c
 rem call "%CurrentCD%Script\dlgit" pcre2                        svn://vcs.exim.org/pcre2                                            %Buildtype% pcre2.sln
 rem call "%CurrentCD%Script\dlgit" glib                         https://github.com/GNOME/glib.git                                   %Buildtype% glib.sln
 rem call "%CurrentCD%Script\dlgit" tinyxml2                     https://github.com/leethomason/tinyxml2.git                         %Buildtype% tinyxml2.sln
-call "%CurrentCD%Script\dlgit" llvm                      https://github.com/llvm/llvm-project.git                                %Buildtype% llvm.sln
-rem call "%CurrentCD%Script\dlzip" qt-everywhere-src-5.14.0     http://download.qt.io/archive/qt/5.14/5.14.0/single/qt-everywhere-src-5.14.0.tar.xz             %Buildtype% QT5.sln
-rem call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz                                      %Buildtype% VTK.sln
-rem call "%CurrentCD%Script\dlgit" CastXML                      https://github.com/CastXML/CastXML.git                                %Buildtype% CastXML.sln
-rem call "%CurrentCD%Script\dlgit" qTox                         https://github.com/qTox/qTox.git                                   %Buildtype% qTox.sln
-rem call "%CurrentCD%Script\dlgit" pytorch                      https://github.com/pytorch/pytorch.git                             %Buildtype% Caffe2.sln
+rem call "%CurrentCD%Script\dlgit" llvm                      https://github.com/llvm/llvm-project.git                               %Buildtype% llvm.sln
+call "%CurrentCD%Script\dlgit" qt5                       https://github.com/qt/qt5.git                                           %Buildtype% QT5.sln
+rem call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz          %Buildtype% VTK.sln
+rem call "%CurrentCD%Script\dlgit" CastXML                      https://github.com/CastXML/CastXML.git                              %Buildtype% CastXML.sln
+rem call "%CurrentCD%Script\dlgit" qTox                         https://github.com/qTox/qTox.git                                    %Buildtype% qTox.sln
+rem call "%CurrentCD%Script\dlgit" pytorch                      https://github.com/pytorch/pytorch.git                              %Buildtype% Caffe2.sln

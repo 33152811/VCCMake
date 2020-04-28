@@ -3,7 +3,9 @@
 - [English](readme.md)
 
 ## 文件说明：
-    Tools            ：目录; 放置着编译需要的工具。如CMake、pkgconfig、7z,等等;
+    Tools            ：目录; 放置着编译需要的工具。CMake、Python、Perl、Meson、pkg-config、jom、curl、7z;
+    Patch            ：目录; 放置源码的补丁;
+    Single           ：目录; 放置你想自己编译源码的自定义编译文件;
     Script\dlzip.cmd ：从网络上下载源代码压缩文件;
     Script\dlgit.cmd ：GIT 方式下载源代码;
     Script\dlsvn.cmd ：SVN 方式下载源代码;
