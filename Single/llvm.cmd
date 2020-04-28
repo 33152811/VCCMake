@@ -41,8 +41,8 @@ cmake %BuildSrcPFPath%
   )
 
 :: Брвы clang
-echo  Брвы %Bname%
-title Брвы %Bname%
+echo  Брвы llvm - clang
+title Брвы llvm - clang
 set BuildSrcPFPath=%VCMakeRootPath%Build\clang\%BuildHostX8664%
 cmake %sPara% -DCMAKE_INSTALL_PREFIX=%InstallSDKPath% -Thost=%BuildHostX8664% -B %BuildSrcPFPath% -G %BuildLanguageX% -A %BuildPlatform_% %VCMakeRootPath%\Source\%SourceProjName%\clang
 cmake %BuildSrcPFPath%
