@@ -11,8 +11,7 @@ set "LLVM_INSTALL_DIR=%InstallSDKPath%"
 cd %VCMakeRootPath%Source\%SourceProjName%
 
 :: 切换分支
-git branch my5.14.0 5.14.0
-git switch my5.14.0
+git checkout -b my5.14 5.14
 
 :: 检查是否有 patch 补丁文件
  if exist "%VCMakeRootPath%Patch\%SourceProjName%.patch" (
