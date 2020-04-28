@@ -11,7 +11,7 @@ set "LLVM_INSTALL_DIR=%InstallSDKPath%"
 cd %VCMakeRootPath%Source\%SourceProjName%
 
 :: 切换分支
-git checkout -b my5.14.0 remotes/origin/5.14.0
+git checkout -b test v5.14.0
 
 :: 检查是否有 patch 补丁文件
  if exist "%VCMakeRootPath%Patch\%SourceProjName%.patch" (
@@ -22,6 +22,6 @@ git checkout -b my5.14.0 remotes/origin/5.14.0
  )
 
 :: 编译
-call configure -confirm-license -opensource -platform win32-msvc -mp -debug-and-release -static -prefix "%QTInstallPath%" -nomake examples  -nomake tests
+call configure -confirm-license -opengl desktop -opensource -platform win32-msvc -mp -debug-and-release -static -prefix "%QTInstallPath%" -nomake examples  -nomake tests
 call jom
 call jom install
