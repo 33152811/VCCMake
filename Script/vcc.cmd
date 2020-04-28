@@ -16,9 +16,9 @@ set "sFile=%CurrentCD%Script\p%Platform2%.txt"
 if exist %sFile% (
   set "sPath="
   for /f "tokens=*" %%I in (%sFile%) do (set "sPath=!sPath!;%%I")
-  set "Path=%CurrentCD%Tools\CMake\bin;%CurrentCD%Tools\jom_1_1_3;%CurrentCD%Tools\Meson;%CurrentCD%Tools\Perl;%CurrentCD%Tools\Python3.8;%SetupPath%\bin;%sPath%;%Path%"
+  set "Path=%CurrentCD%Tools\CMake\bin;%CurrentCD%Tools\jom_1_1_3;%CurrentCD%Tools\Meson;%CurrentCD%Tools\Perl\Perl\bin;%CurrentCD%Tools\Python3.8;%SetupPath%\bin;%sPath%;%Path%"
 ) else (
-  set "Path=%CurrentCD%Tools\CMake\bin;%CurrentCD%Tools\jom_1_1_3;%CurrentCD%Tools\Meson;%CurrentCD%Tools\Perl;%CurrentCD%Tools\Python3.8;%SetupPath%\bin;%Path%"
+  set "Path=%CurrentCD%Tools\CMake\bin;%CurrentCD%Tools\jom_1_1_3;%CurrentCD%Tools\Meson;%CurrentCD%Tools\Perl\Perl\bin;%CurrentCD%Tools\Python3.8;%SetupPath%\bin;%Path%"
 )
 
 :: ±‡“Î”Ô—‘
