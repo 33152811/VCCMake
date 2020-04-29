@@ -22,6 +22,6 @@ git checkout -b test v5.14.0
  )
 
 :: Брвы
-call configure -confirm-license -opengl desktop -opensource -platform win32-msvc -mp -debug-and-release -static -prefix "%QTInstallPath%" -nomake examples  -nomake tests
+call configure -confirm-license -opengl desktop -opensource -platform win32-msvc -mp -release -static -prefix "%QTInstallPath%" -nomake examples  -nomake tests
 call jom
 call jom install
