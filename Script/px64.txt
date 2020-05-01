@@ -37,3 +37,4 @@ F:\Green\Language\Matlab\R2018b\extern\include
 F:\Green\Language\Matlab\R2018b\extern\lib\win64\microsoft
 F:\Green\Language\OCaml64
 F:\Green\Language\OCaml64\bin
+F:\Green\Language\sphinx-3.0.3\bin

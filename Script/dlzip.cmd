@@ -5,9 +5,10 @@ set "Bhttp=%2"
 set "Bpath=%3"
 set "Bulid=%4 %5 %6 %7 %8 %9"
 
-if exist "%Bpath%Source\%Bname%"   goto Compile
-if exist "%Bpath%%Bname%.tar"      goto Unzip2
-if exist "%Bpath%%Bname%.tar.gz"   goto Unzip1
+if exist "%Bpath%Source\%Bname%"    goto Compile
+if exist "%Bpath%%Bname%.tar"       goto Unzip2
+if exist "%Bpath%%Bname%.tar.gz"    goto Unzip1
+if exist "%Bpath%%Bname%.tar.bz2"   goto Unzip0
 
 if exist "%Bpath%%Bname%.tar.xz" (
   echo  解压缩 %Bname%
@@ -27,6 +28,12 @@ title 下载 %Bname%
    7z x "%Bpath%%Bname%.tar" -o"%Bpath%Source\"
    goto Compile
  )
+
+:Unzip0
+echo  解压缩 %Bname%
+title 解压缩 %Bname%
+ 7z x "%Bpath%%Bname%.tar.bz2" -o"%Bpath%"
+goto Unzip2
 
 :Unzip1
 echo  解压缩 %Bname%

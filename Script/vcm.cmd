@@ -83,7 +83,8 @@ title 编译完成，清理临时文件
   )
   
   :: 删除临时文件 
-	if exist "%Bpath%%Bname%.tar.gz" del "%Bpath%%Bname%.tar.gz"
+	if exist "%Bpath%%Bname%.tar.bz2" del "%Bpath%%Bname%.tar.bz2"
+	if exist "%Bpath%%Bname%.tar.gz"  del "%Bpath%%Bname%.tar.gz"
 	if exist "%Bpath%%Bname%.tar"    del "%Bpath%%Bname%.tar"
 )
 
