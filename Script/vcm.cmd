@@ -73,8 +73,8 @@ if exist "%Bpath%Patch\%Bname%_sln.cmd" (
   goto bEnd
   )
   
-echo  编译完成，清理临时文件
-title 编译完成，清理临时文件
+echo  编译 %Bname% 完成，清理临时文件
+title 编译 %Bname% 完成，清理临时文件
   :: 源代码还原
   cd "%Bpath%Source\%Bname%"
   if exist "%Bpath%Source\%Bname%\.git\" (
@@ -85,7 +85,8 @@ title 编译完成，清理临时文件
   :: 删除临时文件 
 	if exist "%Bpath%%Bname%.tar.bz2" del "%Bpath%%Bname%.tar.bz2"
 	if exist "%Bpath%%Bname%.tar.gz"  del "%Bpath%%Bname%.tar.gz"
-	if exist "%Bpath%%Bname%.tar"    del "%Bpath%%Bname%.tar"
+	if exist "%Bpath%%Bname%.tar"     del "%Bpath%%Bname%.tar"
+	if exist "%Bpath%%Bname%.zip"     del "%Bpath%%Bname%.zip"
 )
 
 :bEnd

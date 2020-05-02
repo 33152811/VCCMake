@@ -12,12 +12,12 @@ if %BuildPlatform_% == x64 (
   set PlatformModel=32
 )
 
-@echo %BuildLanguage_% | findstr /c:"2017">nul
-@if %errorlevel% equ 1 (
+rem @echo %BuildLanguage_% | findstr /c:"2017">nul
+rem @if %errorlevel% equ 1 (
   set LangToolset=msvc-14.1
-) else (
-  set LangToolset=msvc-14.2
-)
+rem ) else (
+rem   set LangToolset=msvc-14.2
+rem )
 
 cd %SourceCodePath%Source\%SourceCodeName%
 git.exe clean -d  -fx -f
