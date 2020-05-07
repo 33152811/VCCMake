@@ -10,7 +10,6 @@ set SetupPath=%6
 set "Buildtype=%CurrentCD% %BuildLang% %Platform1% %Platform2% %Configure% %SetupPath%"
 
 rem call "%CurrentCD%Script\dlgit" ImageMagick-windows          https://github.com/ImageMagick/ImageMagick-windows.git              %Buildtype% nghttp2.sln
-call "%CurrentCD%Script\dlgit" gettext                      https://github.com/winlibs/gettext.git                              %Buildtype% gettext.sln
 rem call "%CurrentCD%Script\dlzip" ncurses-6.2                  https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz              %Buildtype% ncurses.sln
 rem call "%CurrentCD%Script\dlgit" fish                         https://git.sr.ht/~faho/fish                                        %Buildtype% fish.sln
 
@@ -39,6 +38,7 @@ rem call "%CurrentCD%Script\dlgit" freetype                     https://github.c
 rem call "%CurrentCD%Script\dlgit" hdf5                         https://github.com/live-clones/hdf5.git                             %Buildtype% hdf5.sln
 rem call "%CurrentCD%Script\dlgit" snappy                       https://github.com/willyd/snappy.git                                %Buildtype% snappy.sln
 rem call "%CurrentCD%Script\dlgit" libiconv                     https://github.com/LuaDist/libiconv.git                             %Buildtype% libiconv.sln
+rem call "%CurrentCD%Script\dlgit" gettext                      https://github.com/winlibs/gettext.git                              %Buildtype% gettext.sln
 
 rem call "%CurrentCD%Script\dlgit" libxml2                      https://github.com/GNOME/libxml2.git                                %Buildtype% xml2.sln
 rem call "%CurrentCD%Script\dlgit" pcre                         https://github.com/svn2github/pcre.git                              %Buildtype% pcre.sln
@@ -49,7 +49,7 @@ rem call "%CurrentCD%Script\dlgit" leveldb                      https://github.c
 rem call "%CurrentCD%Script\dlgit" openssl                      https://github.com/janbar/openssl-cmake.git                         %Buildtype% openssl.sln
 rem call "%CurrentCD%Script\dlgit" c-ares                        https://github.com/c-ares/c-ares.git                                %Buildtype% c-ares.sln
 rem call "%CurrentCD%Script\dlgit" nghttp2                      https://github.com/nghttp2/nghttp2.git                              %Buildtype% nghttp2.sln
-rem call "%CurrentCD%Script\dlgit" ceres                        https://github.com/ceres-solver/ceres-solver.git                    %Buildtype% ceres.sln
+call "%CurrentCD%Script\dlgit" ceres                        https://github.com/ceres-solver/ceres-solver.git                    %Buildtype% ceres.sln
 rem call "%CurrentCD%Script\dlgit" brotli                       https://github.com/google/brotli.git                                %Buildtype% brotli.sln
 rem call "%CurrentCD%Script\dlgit" eigen                        https://github.com/eigenteam/eigen-git-mirror.git                   %Buildtype% eigen3.sln
 rem call "%CurrentCD%Script\dlgit" fribidi-cmake                https://github.com/tamaskenez/fribidi-cmake.git                     %Buildtype% fribidi.sln

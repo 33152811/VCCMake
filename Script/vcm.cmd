@@ -67,6 +67,11 @@ if exist "%Bpath%Patch\%Bname%_sln.cmd" (
 :: 如果上面 VC 多进程编译没有任何问题，这里就不会再编译了，直接安装了
 	CMake --build "%Btemp%" --config %Bconf% --target install
 	
+:: 安装之后，是否有自定义的动作
+ if exist "%Bpath%After\%Bname%.cmd" (
+ call "%Bpath%After\%Bname%.cmd"  %Bpath% %BInst% %Bname% %Bplat% %Blang% %Bhost% %Bconf%
+)
+
 :: 检查 CMake 编译是否有错误
   if %ERRORLEVEL% NEQ 0 (
   echo 编译出现错误，停止编译
