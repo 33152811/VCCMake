@@ -9,3 +9,4 @@ set BuildHostX8664=%6
 set BuildConfigure=%7
 
 copy /Y "%InstallSDKPath%\lib\turbojpeg-static.lib" "%InstallSDKPath%\lib\turbojpeg.lib"
+copy /Y "%InstallSDKPath%\lib\jpeg-static.lib"      "%InstallSDKPath%\lib\jpeg.lib"
