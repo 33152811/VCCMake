@@ -21,12 +21,14 @@ if exist "%Bpath%%Bname%.tar.xz" (
 echo  下载 %Bname%
 title 下载 %Bname%
  curl --connect-timeout 30 --retry 10 --retry-delay 5 -C - -OL %Bhttp%
+ 
  if exist "%Bpath%%Bname%.tar.xz" (
-  echo  解压缩 %Bname%
-  title 解压缩 %Bname%
    7z x "%Bpath%%Bname%.tar.xz" -o"%Bpath%"
-   7z x "%Bpath%%Bname%.tar" -o"%Bpath%Source\"
-   goto Compile
+   goto Unzip2
+ )
+ 
+ if exist "%Bpath%%Bname%.tar.gz" (
+   goto Unzip1
  )
 
 :Unzip0

@@ -8,4 +8,4 @@ set BuildLanguageX=%5
 set BuildHostX8664=%6
 set BuildConfigure=%7
 
-copy /Y "%InstallSDKPath%\leptonica-1.80.0.lib" "%InstallSDKPath%\leptonica.lib"
+copy /Y "%InstallSDKPath%\lib\leptonica-1.80.0.lib" "%InstallSDKPath%\lib\leptonica.lib"

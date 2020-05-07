@@ -8,6 +8,6 @@ set BuildLanguageX=%5
 set BuildHostX8664=%6
 set BuildConfigure=%7
 
-copy /Y "%InstallSDKPath%\brotlicommon-static.lib" "%InstallSDKPath%\brotlicommon.lib"
-copy /Y "%InstallSDKPath%\brotlidec-static.lib" "%InstallSDKPath%\brotlidec.lib"
-copy /Y "%InstallSDKPath%\brotlienc-static.lib" "%InstallSDKPath%\brotlienc.lib"
+copy /Y "%InstallSDKPath%\lib\brotlicommon-static.lib" "%InstallSDKPath%\lib\brotlicommon.lib"
+copy /Y "%InstallSDKPath%\lib\brotlidec-static.lib" "%InstallSDKPath%\lib\brotlidec.lib"
+copy /Y "%InstallSDKPath%\lib\brotlienc-static.lib" "%InstallSDKPath%\lib\brotlienc.lib"
