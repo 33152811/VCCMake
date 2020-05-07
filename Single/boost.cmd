@@ -22,4 +22,4 @@ rem )
 cd %SourceCodePath%Source\%SourceCodeName%
 git.exe clean -d  -fx -f
 call bootstrap.bat
-b2 install --prefix=%InstallSDKPath% --toolset=%LangToolset% address-model=%PlatformModel% link=static runtime-link=static  threading=multi
+b2 install --prefix=%InstallSDKPath% --toolset=%LangToolset% address-model=%PlatformModel% link=static runtime-link=static  threading=multi release
