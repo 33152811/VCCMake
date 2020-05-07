@@ -1,28 +1,28 @@
 @echo off
 
-set SourceCodePath=%1
+set VCMakeRootPath=%1
 set InstallSDKPath=%2
-set BuildPlatform_=%3
-set BuildLanguageX=%4
-set BakupCurrentCD=%5
-set SourceProjName=%6
-set BuildHostX8664=%7
+set SourceProjName=%3
+set BuildPlatform_=%4
+set BuildLanguageX=%5
+set BuildHostX8664=%6
+set BuildConfigure=%7
 
-set BuildPath=%BakupCurrentCD%Build\%SourceProjName%\%BuildHostX8664%
+set BuildPath=%VCMakeRootPath%Build\%SourceProjName%\%BuildHostX8664%
 
 :: ¼ì²éÊÇ·ñÓÐ patch ²¹¶¡ÎÄ¼þ
- if exist "%BakupCurrentCD%Patch\%SourceProjName%.patch" (
-   copy /Y "%BakupCurrentCD%Patch\%SourceProjName%.patch" "%BakupCurrentCD%Source\%SourceProjName%\%SourceProjName%.patch"
-   cd "%BakupCurrentCD%Source\%SourceProjName%"
+ if exist "%VCMakeRootPath%Patch\%SourceProjName%.patch" (
+   copy /Y "%VCMakeRootPath%Patch\%SourceProjName%.patch" "%VCMakeRootPath%Source\%SourceProjName%\%SourceProjName%.patch"
+   cd "%VCMakeRootPath%Source\%SourceProjName%"
    git apply "%SourceProjName%.patch"
-   del "%BakupCurrentCD%Source\%SourceProjName%\%SourceProjName%.patch"
+   del "%VCMakeRootPath%Source\%SourceProjName%\%SourceProjName%.patch"
  )
 
 :: ½¨Á¢±àÒëÄ¿Â¼
 md %BuildPath%
 cd %BuildPath%
 
-meson %SourceCodePath% --buildtype=release --prefix=%InstallSDKPath% --backend=vs
+meson %VCMakeRootPath%Source\%SourceProjName% --buildtype=release --prefix=%InstallSDKPath% --backend=vs
 
 :: ×Ö·û´®ËÑË÷Ìæ»»
 rem powershell -Command "(gc %liblzmavcxprojName%) -replace '%strMD%', '%strMT%' | Out-File %liblzmavcxprojName%"

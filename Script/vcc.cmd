@@ -16,9 +16,9 @@ set "sFile=%CurrentCD%Script\p%Platform2%.txt"
 if exist %sFile% (
   set "sPath="
   for /f "tokens=*" %%I in (%sFile%) do (set "sPath=!sPath!;%%I")
-  set "Path=%CurrentCD%Tools\CMake\bin;%CurrentCD%Tools\jom_1_1_3;%CurrentCD%Tools\Meson;%CurrentCD%Tools\bison\bin;%CurrentCD%Tools\Perl\Perl\bin;%CurrentCD%Tools\flex\bin;%CurrentCD%Tools\Python2.7;%SetupPath%\bin;%sPath%;%Path%"
+  set "Path=%CurrentCD%Tools\CMake\bin;%CurrentCD%Tools\jom_1_1_3;%CurrentCD%Tools\Meson;%CurrentCD%Tools\bison\bin;%CurrentCD%Tools\Perl\Perl\bin;%CurrentCD%Tools\flex\bin;%CurrentCD%Tools\Python2.7;%CurrentCD%Tools\Python2.7\Scripts;%SetupPath%\bin;%sPath%;%Path%"
 ) else (
-  set "Path=%CurrentCD%Tools\CMake\bin;%CurrentCD%Tools\jom_1_1_3;%CurrentCD%Tools\Meson;%CurrentCD%Tools\bison\bin;%CurrentCD%Tools\Perl\Perl\bin;%CurrentCD%Tools\flex\bin;%CurrentCD%Tools\Python2.7;%SetupPath%\bin;%Path%"
+  set "Path=%CurrentCD%Tools\CMake\bin;%CurrentCD%Tools\jom_1_1_3;%CurrentCD%Tools\Meson;%CurrentCD%Tools\bison\bin;%CurrentCD%Tools\Perl\Perl\bin;%CurrentCD%Tools\flex\bin;%CurrentCD%Tools\Python2.7;%CurrentCD%Tools\Python2.7\Scripts;%SetupPath%\bin;%Path%"
 )
 
 :: ±‡“Î”Ô—‘
