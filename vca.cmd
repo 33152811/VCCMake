@@ -40,7 +40,7 @@ rem call "%CurrentCD%Script\dlgit" freetype                     https://github.c
 rem call "%CurrentCD%Script\dlgit" hdf5                         https://github.com/live-clones/hdf5.git                             %Buildtype% hdf5.sln
 rem call "%CurrentCD%Script\dlgit" libiconv                     https://github.com/LuaDist/libiconv.git                             %Buildtype% libiconv.sln
 rem call "%CurrentCD%Script\dlgit" gettext                      https://github.com/winlibs/gettext.git                              %Buildtype% gettext.sln
-rem call "%CurrentCD%Script\dlgit" libxml2                      https://github.com/GNOME/libxml2.git                                %Buildtype% libxml2.sln
+call "%CurrentCD%Script\dlgit" libxml2                      https://github.com/GNOME/libxml2.git                                %Buildtype% libxml2.sln
 rem call "%CurrentCD%Script\dlgit" pcre                         https://github.com/svn2github/pcre.git                              %Buildtype% pcre.sln
 rem call "%CurrentCD%Script\dlzip" pcre2-10.34                  https://downloads.sourceforge.net/pcre/pcre2-10.34.tar.bz2          %Buildtype% pcre2.sln
 rem call "%CurrentCD%Script\dlgit" PDCurses                     https://github.com/Bill-Gray/PDCurses.git                           %Buildtype% PDCurses.sln
@@ -56,7 +56,8 @@ rem call "%CurrentCD%Script\dlgit" fribidi-cmake                https://github.c
 rem call "%CurrentCD%Script\dlgit" doxygen                      https://github.com/doxygen/doxygen.git                              %Buildtype% doxygen.sln
 rem call "%CurrentCD%Script\dlgit" tinyxml2                     https://github.com/leethomason/tinyxml2.git                         %Buildtype% tinyxml2.sln
 rem call "%CurrentCD%Script\dlgit" llvm                      https://github.com/llvm/llvm-project.git                               %Buildtype% llvm.sln
-call "%CurrentCD%Script\dlgit" qt5                       https://github.com/qt/qt5.git                                           %Buildtype% QT5.sln
+rem call "%CurrentCD%Script\dlgit" icu                       https://github.com/unicode-org/icu.git                                  %Buildtype% icu.sln
+rem call "%CurrentCD%Script\dlgit" qt5                       https://github.com/qt/qt5.git                                           %Buildtype% QT5.sln
 rem call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz          %Buildtype% VTK.sln
 rem call "%CurrentCD%Script\dlgit" CastXML                      https://github.com/CastXML/CastXML.git                              %Buildtype% CastXML.sln
 rem call "%CurrentCD%Script\dlgit" qTox                         https://github.com/qTox/qTox.git                                    %Buildtype% qTox.sln
