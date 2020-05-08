@@ -35,8 +35,8 @@ rem call "%CurrentCD%Script\dlgit" gtest                        https://github.c
 rem call "%CurrentCD%Script\dlzip" sqlite-snapshot-202003121754 https://www.sqlite.org/snapshot/sqlite-snapshot-202003121754.tar.gz %Buildtype% sqlite.sln
 rem call "%CurrentCD%Script\dlgit" libssh2                      https://github.com/libssh2/libssh2.git                              %Buildtype% libssh2.sln
 rem call "%CurrentCD%Script\dlgit" curl                         https://github.com/curl/curl.git                                    %Buildtype% curl.sln
-rem call "%CurrentCD%Script\dlgit" harfbuzz                     https://github.com/harfbuzz/harfbuzz.git                            %Buildtype% harfbuzz.sln
 rem call "%CurrentCD%Script\dlgit" freetype                     https://github.com/winlibs/freetype.git                             %Buildtype% freetype.sln
+rem call "%CurrentCD%Script\dlgit" harfbuzz                     https://github.com/harfbuzz/harfbuzz.git                            %Buildtype% harfbuzz.sln
 rem call "%CurrentCD%Script\dlgit" hdf5                         https://github.com/live-clones/hdf5.git                             %Buildtype% hdf5.sln
 rem call "%CurrentCD%Script\dlgit" libiconv                     https://github.com/LuaDist/libiconv.git                             %Buildtype% libiconv.sln
 rem call "%CurrentCD%Script\dlgit" gettext                      https://github.com/winlibs/gettext.git                              %Buildtype% gettext.sln
@@ -58,7 +58,7 @@ rem call "%CurrentCD%Script\dlgit" tinyxml2                     https://github.c
 rem call "%CurrentCD%Script\dlgit" llvm                      https://github.com/llvm/llvm-project.git                               %Buildtype% llvm.sln
 rem call "%CurrentCD%Script\dlgit" icu                       https://github.com/unicode-org/icu.git                                  %Buildtype% icu.sln
 rem call "%CurrentCD%Script\dlgit" libexpat                  https://github.com/libexpat/libexpat.git                                %Buildtype% expat.sln
-call "%CurrentCD%Script\dlgit" fontconfig                https://github.com/CMakePorts/fontconfig.git                            %Buildtype% fontconfig.sln
+call "%CurrentCD%Script\dlgit" fontconfig                https://github.com/georgegerdin/fontconfig-cmake.git                            %Buildtype% fontconfig.sln
 rem call "%CurrentCD%Script\dlgit" qt5                       https://github.com/qt/qt5.git                                           %Buildtype% QT5.sln
 rem call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz          %Buildtype% VTK.sln
 rem call "%CurrentCD%Script\dlgit" CastXML                      https://github.com/CastXML/CastXML.git                              %Buildtype% CastXML.sln
