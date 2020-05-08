@@ -10,6 +10,7 @@ set SetupPath=%6
 set "Buildtype=%CurrentCD% %BuildLang% %Platform1% %Platform2% %Configure% %SetupPath%"
 
 rem call "%CurrentCD%Script\dlgit" ImageMagick-windows          https://github.com/ImageMagick/ImageMagick-windows.git              %Buildtype% nghttp2.sln
+rem call "%CurrentCD%Script\dlgit" glib                         https://github.com/GNOME/glib.git                                   %Buildtype% glib.sln
 rem call "%CurrentCD%Script\dlzip" ncurses-6.2                  https://ftp.gnu.org/pub/gnu/ncurses/ncurses-6.2.tar.gz              %Buildtype% ncurses.sln
 rem call "%CurrentCD%Script\dlgit" fish                         https://git.sr.ht/~faho/fish                                        %Buildtype% fish.sln
 
@@ -53,9 +54,8 @@ rem call "%CurrentCD%Script\dlgit" brotli                       https://github.c
 rem call "%CurrentCD%Script\dlgit" eigen                        https://github.com/eigenteam/eigen-git-mirror.git                   %Buildtype% eigen3.sln
 rem call "%CurrentCD%Script\dlgit" fribidi-cmake                https://github.com/tamaskenez/fribidi-cmake.git                     %Buildtype% fribidi.sln
 rem call "%CurrentCD%Script\dlgit" doxygen                      https://github.com/doxygen/doxygen.git                              %Buildtype% doxygen.sln
-call "%CurrentCD%Script\dlgit" glib                         https://github.com/GNOME/glib.git                                   %Buildtype% glib.sln
 rem call "%CurrentCD%Script\dlgit" tinyxml2                     https://github.com/leethomason/tinyxml2.git                         %Buildtype% tinyxml2.sln
-rem call "%CurrentCD%Script\dlgit" llvm                      https://github.com/llvm/llvm-project.git                               %Buildtype% llvm.sln
+call "%CurrentCD%Script\dlgit" llvm                      https://github.com/llvm/llvm-project.git                               %Buildtype% llvm.sln
 rem call "%CurrentCD%Script\dlgit" qt5                       https://github.com/qt/qt5.git                                           %Buildtype% QT5.sln
 rem call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz          %Buildtype% VTK.sln
 rem call "%CurrentCD%Script\dlgit" CastXML                      https://github.com/CastXML/CastXML.git                              %Buildtype% CastXML.sln

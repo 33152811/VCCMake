@@ -22,11 +22,10 @@ set BuildPath=%VCMakeRootPath%Build\%SourceProjName%\%BuildHostX8664%
 md %BuildPath%
 cd %BuildPath%
 
-meson %VCMakeRootPath%Source\%SourceProjName% --buildtype=release --prefix=%InstallSDKPath% --backend=vs
+meson %VCMakeRootPath%Source\%SourceProjName% --buildtype=release --prefix=%InstallSDKPath% --backend=vs --build_tests=no
 
 :: 字符串搜索替换
 rem powershell -Command "(gc %liblzmavcxprojName%) -replace '%strMD%', '%strMT%' | Out-File %liblzmavcxprojName%"
-powershell -Command "(gc %liblzmavcxprojName%) -replace '%strMD%', '%strMT%' | Out-File %liblzmavcxprojName%"
 
 
 MSBuild.exe %SourceProjName%.sln /nologo /consoleloggerparameters:Verbosity=minimal /maxcpucount /nodeReuse:true^
@@ -35,9 +34,9 @@ MSBuild.exe %SourceProjName%.sln /nologo /consoleloggerparameters:Verbosity=mini
  /flp1:LogFile=zerror.log;errorsonly;Verbosity=diagnostic^
  /flp2:LogFile=zwarns.log;warningsonly;Verbosity=diagnostic
 
-rem   :: 源代码还原
-rem   cd "%Bpath%Source\%Bname%"
-rem   if exist "%Bpath%Source\%Bname%\.git\" (
-rem     git clean -d  -fx -f
-rem     git checkout .
+  :: 源代码还原
+  cd "%Bpath%Source\%Bname%"
+  if exist "%Bpath%Source\%Bname%\.git\" (
+    git clean -d  -fx -f
+    git checkout .
   )
