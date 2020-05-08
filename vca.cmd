@@ -60,7 +60,7 @@ rem call "%CurrentCD%Script\dlgit" llvm                      https://github.com/
 rem call "%CurrentCD%Script\dlgit" libexpat                  https://github.com/libexpat/libexpat.git                                %Buildtype% expat.sln
 rem call "%CurrentCD%Script\dlgit" fontconfig                https://github.com/georgegerdin/fontconfig-cmake.git                            %Buildtype% fontconfig.sln
 rem call "%CurrentCD%Script\dlgit" icu                       https://github.com/hunter-packages/icu.git                                  %Buildtype% icu.sln
-call "%CurrentCD%Script\dlgit" qt5                       https://github.com/qt/qt5.git                                           %Buildtype% QT5.sln
+call "%CurrentCD%Script\dlgit" qt5                       https://github.com/qt/qt5.git                                           %Buildtype% QT.sln
 rem call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz          %Buildtype% VTK.sln
 rem call "%CurrentCD%Script\dlgit" CastXML                      https://github.com/CastXML/CastXML.git                              %Buildtype% CastXML.sln
 rem call "%CurrentCD%Script\dlgit" qTox                         https://github.com/qTox/qTox.git                                    %Buildtype% qTox.sln
