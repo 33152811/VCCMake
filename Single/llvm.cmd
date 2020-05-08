@@ -42,6 +42,7 @@ cmake %BuildLLVMPathX%
   )
 
 echo 编译 LLVM 完成后，MSBUILD.EXE 进程并不会全部关闭掉，需手动杀死 MSBUILD.EXE 进程，才可以进行 CLANG 的编译
+echo 如果 CMake Clang 发生错误，请使用 CMakeGUI 打开 Clang 编译目录，重新 CMake 一下。成功后，再次执行编译
 pause
 
 :: 编译 clang
