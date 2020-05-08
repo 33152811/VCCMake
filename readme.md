@@ -3,7 +3,10 @@
 - [简体中文](readmeCN.md)
 
 ## Document Description:
-    Tools             : Directory; places the tools needed for compilation. Such as cmake, pkgconfig, 7z, etc;
+    Tools             : Directory; Place the tools needed for compilation. Such as cmake, pkgconfig, 7z, etc;
+    Patch             : Directory; Place source patches;
+    Single            : Directory; Place custom build files that you want to compile your own source code;
+    After             : Directory; Place the cmd/bat for the action to be performed after the installation is completed;
     Script \ dlzip.cmd: Download a compressed source code file from the web
     Script \ dlgit.cmd: Download source code in GIT mode
     Script \ dlsvn.cmd: Download source code in SVN mode
