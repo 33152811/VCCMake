@@ -56,9 +56,9 @@ rem call "%CurrentCD%Script\dlgit" fribidi-cmake                https://github.c
 rem call "%CurrentCD%Script\dlgit" doxygen                      https://github.com/doxygen/doxygen.git                              %Buildtype% doxygen.sln
 rem call "%CurrentCD%Script\dlgit" tinyxml2                     https://github.com/leethomason/tinyxml2.git                         %Buildtype% tinyxml2.sln
 rem call "%CurrentCD%Script\dlgit" llvm                      https://github.com/llvm/llvm-project.git                               %Buildtype% llvm.sln
-rem call "%CurrentCD%Script\dlgit" icu                       https://github.com/unicode-org/icu.git                                  %Buildtype% icu.sln
 rem call "%CurrentCD%Script\dlgit" libexpat                  https://github.com/libexpat/libexpat.git                                %Buildtype% expat.sln
-call "%CurrentCD%Script\dlgit" fontconfig                https://github.com/georgegerdin/fontconfig-cmake.git                            %Buildtype% fontconfig.sln
+rem call "%CurrentCD%Script\dlgit" fontconfig                https://github.com/georgegerdin/fontconfig-cmake.git                            %Buildtype% fontconfig.sln
+call "%CurrentCD%Script\dlgit" icu                       https://github.com/hunter-packages/icu.git                                  %Buildtype% icu.sln
 rem call "%CurrentCD%Script\dlgit" qt5                       https://github.com/qt/qt5.git                                           %Buildtype% QT5.sln
 rem call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz          %Buildtype% VTK.sln
 rem call "%CurrentCD%Script\dlgit" CastXML                      https://github.com/CastXML/CastXML.git                              %Buildtype% CastXML.sln
