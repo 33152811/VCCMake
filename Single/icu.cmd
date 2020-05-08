@@ -26,10 +26,14 @@ set "strVcrNew=<RuntimeLibrary>MultiThreaded</RuntimeLibrary>"
 set "strDynOld=<ConfigurationType>DynamicLibrary</ConfigurationType>"
 set "strStaNew=<ConfigurationType>StaticLibrary</ConfigurationType>"
 
+set "strDllOld=.dll</OutputFile>"
+set "strLibNew=.lib</OutputFile>"
+
 
 for /f %%i in ('dir /b /s /a:-d *.vcxproj') do (
   powershell -Command "(gc %%i) -replace '%strVcrOld%', '%strVcrNew%' | Out-File %%i"
   powershell -Command "(gc %%i) -replace '%strDynOld%', '%strStaNew%' | Out-File %%i"
+  powershell -Command "(gc %%i) -replace '%strDllOld%', '%strLibNew%' | Out-File %%i"
 )
 
 :: VC 多进程编译；加快编译速度；如果工程名称不正确，不影响编译，只是不能使用 VC 的多进程编译。多进程编译会起很多进程编译，编译大工程时，会拖慢机器相应速度
