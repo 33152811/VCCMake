@@ -72,4 +72,9 @@ cmake %BuildCLANGPath%
   goto bEnd
   )
 
+
+:: 源代码还原
+git clean -d  -fx -f
+git checkout .
+
 :bEnd
