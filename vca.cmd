@@ -20,6 +20,7 @@ rem call "%CurrentCD%Script\dlgit" bzip2                        https://github.c
 rem call "%CurrentCD%Script\dlgit" z3                           https://github.com/Z3Prover/z3.git                                  %Buildtype% z3.sln
 rem call "%CurrentCD%Script\dlgit" lz4                          https://github.com/lz4/lz4.git                                      %Buildtype% lz4.sln
 rem call "%CurrentCD%Script\dlgit" snappy                       https://github.com/willyd/snappy.git                                %Buildtype% snappy.sln
+rem call "%CurrentCD%Script\dlgit" zstd                         https://github.com/facebook/zstd.git                                %Buildtype% zstd.sln
 rem call "%CurrentCD%Script\dlgit" giflib                       https://github.com/xbmc/giflib.git                                  %Buildtype% giflib.sln
 rem call "%CurrentCD%Script\dlgit" libjpeg-turbo                https://github.com/libjpeg-turbo/libjpeg-turbo.git                  %Buildtype% libjpeg-turbo.sln
 rem call "%CurrentCD%Script\dlgit" libpng                       https://github.com/glennrp/libpng.git                               %Buildtype% libpng.sln
@@ -58,8 +59,8 @@ rem call "%CurrentCD%Script\dlgit" tinyxml2                     https://github.c
 rem call "%CurrentCD%Script\dlgit" llvm                      https://github.com/llvm/llvm-project.git                               %Buildtype% llvm.sln
 rem call "%CurrentCD%Script\dlgit" libexpat                  https://github.com/libexpat/libexpat.git                                %Buildtype% expat.sln
 rem call "%CurrentCD%Script\dlgit" fontconfig                https://github.com/georgegerdin/fontconfig-cmake.git                            %Buildtype% fontconfig.sln
-call "%CurrentCD%Script\dlgit" icu                       https://github.com/hunter-packages/icu.git                                  %Buildtype% icu.sln
-rem call "%CurrentCD%Script\dlgit" qt5                       https://github.com/qt/qt5.git                                           %Buildtype% QT5.sln
+rem call "%CurrentCD%Script\dlgit" icu                       https://github.com/hunter-packages/icu.git                                  %Buildtype% icu.sln
+call "%CurrentCD%Script\dlgit" qt5                       https://github.com/qt/qt5.git                                           %Buildtype% QT5.sln
 rem call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz          %Buildtype% VTK.sln
 rem call "%CurrentCD%Script\dlgit" CastXML                      https://github.com/CastXML/CastXML.git                              %Buildtype% CastXML.sln
 rem call "%CurrentCD%Script\dlgit" qTox                         https://github.com/qTox/qTox.git                                    %Buildtype% qTox.sln
