@@ -17,8 +17,8 @@ set "PKGInstallSDKPath=%InstallSDKPath:\=/%"
 >>%VCMakeRootPath%\after\libtiff-4.pc echo Name: libtiff
 >>%VCMakeRootPath%\after\libtiff-4.pc echo Description:  Tag Image File Format (TIFF) library.
 >>%VCMakeRootPath%\after\libtiff-4.pc echo Version: 4.1.0
->>%VCMakeRootPath%\after\libtiff-4.pc echo Libs: -L%PKGInstallSDKPath%/lib -ltiff -lzlib -llzma
->>%VCMakeRootPath%\after\libtiff-4.pc echo Libs.private:  -ltiff -lzlib -llzma
+>>%VCMakeRootPath%\after\libtiff-4.pc echo Libs: -L%PKGInstallSDKPath%/lib -ltiff -lzlib -llzma -lzstd
+>>%VCMakeRootPath%\after\libtiff-4.pc echo Libs.private:  -ltiff -lzlib -llzma -lzstd
 >>%VCMakeRootPath%\after\libtiff-4.pc echo Cflags: -I%PKGInstallSDKPath%/include
 
 copy /Y "%VCMakeRootPath%\after\libtiff-4.pc" "%InstallSDKPath%\lib\pkgconfig\libtiff-4.pc"

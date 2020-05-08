@@ -15,7 +15,7 @@ index 89fc301c..a2faf62a 100644
    # get_disto
    add_executable(get_disto ${GET_DISTO_SRCS})
 -  target_link_libraries(get_disto imagedec)
-+  target_link_libraries(get_disto imagedec liblzma)
++  target_link_libraries(get_disto imagedec liblzma zstd)
    target_include_directories(get_disto
                               PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}
                                       ${CMAKE_CURRENT_SOURCE_DIR}/src
