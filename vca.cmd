@@ -56,11 +56,11 @@ rem call "%CurrentCD%Script\dlgit" brotli                       https://github.c
 rem call "%CurrentCD%Script\dlgit" eigen                        https://github.com/eigenteam/eigen-git-mirror.git                   %Buildtype% eigen3.sln
 rem call "%CurrentCD%Script\dlgit" fribidi-cmake                https://github.com/tamaskenez/fribidi-cmake.git                     %Buildtype% fribidi.sln
 rem call "%CurrentCD%Script\dlgit" tinyxml2                     https://github.com/leethomason/tinyxml2.git                         %Buildtype% tinyxml2.sln
-call "%CurrentCD%Script\dlgit" llvm                         https://github.com/llvm/llvm-project.git                            %Buildtype% llvm.sln
+rem call "%CurrentCD%Script\dlgit" llvm                         https://github.com/llvm/llvm-project.git                            %Buildtype% llvm.sln
 rem call "%CurrentCD%Script\dlgit" libexpat                     https://github.com/libexpat/libexpat.git                            %Buildtype% expat.sln
 rem call "%CurrentCD%Script\dlgit" fontconfig                   https://github.com/georgegerdin/fontconfig-cmake.git                %Buildtype% fontconfig.sln
 rem call "%CurrentCD%Script\dlgit" icu                          https://github.com/hunter-packages/icu.git                          %Buildtype% icu.sln
-rem call "%CurrentCD%Script\dlgit" PROJ                         https://github.com/OSGeo/PROJ.git                           %Buildtype% PROJ.sln
+call "%CurrentCD%Script\dlgit" PROJ                         https://github.com/OSGeo/PROJ.git                           %Buildtype% PROJ.sln
 rem call "%CurrentCD%Script\dlzip" qt-everywhere-src-5.14.2     http://mirrors-wan.geekpie.club/qtproject/archive/qt/5.14/5.14.2/single/qt-everywhere-src-5.14.2.tar.xz   %Buildtype% QT.sln
 rem call "%CurrentCD%Script\dlzip" VTK                          https://www.vtk.org/files/release/9.0/VTK-9.0.0.rc1.tar.gz          %Buildtype% VTK.sln
 rem call "%CurrentCD%Script\dlgit" CastXML                      https://github.com/CastXML/CastXML.git                              %Buildtype% CastXML.sln
