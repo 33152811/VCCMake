@@ -1,0 +1,28 @@
+diff --git "a/src/CMakeLists.txt" "b/src/CMakeLists.txt"
+index 534bc311..90099f75 100644
+--- "a/src/CMakeLists.txt"
++++ "b/src/CMakeLists.txt"
+@@ -43,12 +43,12 @@ endif()
+ 
+ if(BUILD_CCT)
+   include(bin_cct.cmake)
+-  set(BIN_TARGETS ${BIN_TARGETS} cct)
++  set(BIN_TARGETS ${BIN_TARGETS} cct tiff liblzma curl zip jpeg zstd)
+ endif()
+ 
+ if(BUILD_CS2CS)
+   include(bin_cs2cs.cmake)
+-  set(BIN_TARGETS ${BIN_TARGETS} cs2cs)
++  set(BIN_TARGETS ${BIN_TARGETS} cs2cs tiff liblzma curl zip jpeg zstd)
+ endif()
+ 
+ if(BUILD_GEOD)
+@@ -71,7 +71,7 @@ endif()
+ 
+ if(BUILD_GIE)
+   include(bin_gie.cmake)
+-  set(BIN_TARGETS ${BIN_TARGETS} gie)
++  set(BIN_TARGETS ${BIN_TARGETS} gie tiff liblzma curl zip jpeg zstd)
+ endif()
+ 
+ if(BUILD_PROJSYNC)
