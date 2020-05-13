@@ -16,8 +16,14 @@ set BuildConfigure=%7
    del "%VCMakeRootPath%Source\%SourceProjName%\%SourceProjName%.patch"
  )
 
-cd "%VCMakeRootPath%Source\%SourceProjName%\win32"
+set "libxml2SRC=%VCMakeRootPath%Source\%SourceProjName%"
+set "libxml2SRCDisk=%libxml2SRC:~0,2%
+cd\
+%libxml2SRCDisk%
+cd\
+cd "%libxml2SRC%"
 
+cd "%libxml2SRC%\win32"
 cscript configure.js compiler=msvc
 nmake -f Makefile.msvc libxmla
 
@@ -72,5 +78,9 @@ copy /Y "%VCMakeRootPath%Source\%SourceProjName%\include\libxml\xpathInternals.h
 copy /Y "%VCMakeRootPath%Source\%SourceProjName%\include\libxml\xpointer.h"          "%InstallSDKPath%\include\libxml\xpointer.h"          
 
 :: 源代码还原
+cd\
+%libxml2SRCDisk%
+cd\
+cd "%libxml2SRC%"
 git clean -d  -fx -f
 git checkout .
